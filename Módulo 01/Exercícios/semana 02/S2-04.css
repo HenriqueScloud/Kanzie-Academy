@@ -1,0 +1,25 @@
+@charset "UTF-8";
+
+header h1{
+    color:#0000ff
+}
+
+header span {
+    color: #fff;
+    background-color: #0000ff;
+}
+
+.box{
+    color: #001e32;
+    background-color: #e3e3e3;
+}
+
+#box2{
+    color: #e3e3e3;
+    background-color: #001e32;
+}
+
+
+
+
+

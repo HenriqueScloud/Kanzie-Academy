@@ -15,6 +15,10 @@ body{
 
 .titulo-secundario{
     font-size:22px;
+    display:flex;
+    place-content: ;
+    place-items: ;
+    place-self: ;
 
 }
 .span-titulo-secundario,a{
@@ -25,6 +29,7 @@ body{
     line-height: 1.5em;
     text-align: justify;
     opacity: .8;
+    
 
 }
 

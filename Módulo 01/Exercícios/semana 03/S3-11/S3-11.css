@@ -1,0 +1,29 @@
+*{
+    box-sizing: border-box;
+}
+
+
+section{
+    border: 1px solid red ;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+
+    padding: 15px;
+    
+
+}
+
+
+section span.text_line{
+    border:2px solid black;
+    padding: 10px;
+    margin:0px 5px;
+    margin-top: 5px;
+}
+
+section span.text_line:hover{
+    background-color:blue;
+    color: white;
+    cursor: pointer;
+}

@@ -82,4 +82,5 @@ button#Genrenciamento-de-perfis:hover{
     background-color: #fff;
     color: #000;
     font-weight: bold;
+    cursor: pointer;
 }

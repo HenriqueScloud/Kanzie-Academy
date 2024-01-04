@@ -1,0 +1,47 @@
+header{
+    border: 1px solid red;
+    text-align: center;
+    padding: 20px 0;
+}
+
+button{
+    border: none;
+    background-color: #f45c42;
+    padding: 25px 50px;
+}
+
+ul{
+    display: none;
+    position: absolute;
+    top: 36%;
+    background-color: #f45c42;
+    padding: 25px 50px;
+    border: 2px solid black;
+}
+
+ul p{
+    color: white;
+    font-size: 1.5rem;
+    position: absolute;
+    left: 90%;
+    top:-40px;
+    background-color: black;
+    width: 30px;
+    height: 30px;
+    border-radius: 50%;
+}
+.ativo{
+    display: block;
+    animation: menuAtivo .999s forwards;
+}
+
+@keyframes menuAtivo {
+    to{
+        opacity: 1;
+        transform: translate3d(20px,0,0);
+    }
+    from{
+        opacity: 0;
+        transform: translate3d(0,0,0);
+    }
+}

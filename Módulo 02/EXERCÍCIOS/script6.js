@@ -3,7 +3,6 @@ function verticalText(text){
         console.log(`${text[i]}`);
     }
 }
-
 function incrementText(text){
     let incremento = "";
     for (let i=0; i<text.length; i++){
@@ -11,7 +10,6 @@ function incrementText(text){
         console.log(incremento)
     }
 }
-
 function incrementTextBackWards(text){
     let result = '';
     for (let i = text.length -1; i>= 0; i--){
@@ -19,7 +17,6 @@ function incrementTextBackWards(text){
         console.log(result);
     }
 }
-
 function padEnd(palavra, num, incremento){
     let result = palavra;
     for (let i = 0; i<num;i++){
@@ -27,7 +24,6 @@ function padEnd(palavra, num, incremento){
     }
     return result
 }
-
 function subString(text, inicial, final){
     let result ='';
     for (let i = inicial+1;i<final;i++){
@@ -37,7 +33,6 @@ function subString(text, inicial, final){
     }
     return result
 }
-
 function strRepiter(frase,num){
     let result ='';
     for (let i = 0 ; i < num; i++) {
@@ -46,8 +41,6 @@ function strRepiter(frase,num){
     }
     return result
 }
-
-
 function stringCentralizer(palavra,num,element){
     let result =` ${palavra} `;
     for(let i=0;i<num;i++){

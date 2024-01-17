@@ -4,5 +4,4 @@ novoElemento.innerText = 'OLá, Mundo!';
 novoElementoText.innerText = 'Esse texto e de exemplo para o paragrafo do h1 a cima !'
 
 const corpo = document.querySelector('body');
-//corpo.appendChild(novoElemento);
-//corpo.appendChild(novoElementoText);
+corpo.append(novoElemento, novoElementoText)

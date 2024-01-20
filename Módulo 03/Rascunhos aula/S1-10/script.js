@@ -179,11 +179,28 @@ function eNovos(estoque){
     let novos = 0;
     let novoslista = [];
     for(let i=0 ; i<estoque.length; i++){
-        if(estoque[i].ano > "2013"){
+        if(estoque[i].ano >= "2013"){
             novos++;
             novoslista.push(estoque[i])
         }
     }
     console.log(novos)
     console.log(novoslista)
+}
+
+
+// QUEM SÃO OS DONOS
+
+let pessoa  = {
+    nome: "Marcos",
+    contato: '(21) 9 9999-9999'
+}
+
+function adicionarDono(estoque, indice, dono){
+    for (let i = 0; i < estoque.length; i++ ){
+        estoque[i].dono = {};
+    }
+    estoque[indice].dono = dono;
+
+    return estoque;
 }

@@ -172,6 +172,18 @@ function deleteCarLIst(estoque, indice){
         return 'indice invalido !';
     }
     return carrosAtualizados;
-    
 }
 
+// PROCURANDO CARROS NOVOS 
+function eNovos(estoque){
+    let novos = 0;
+    let novoslista = [];
+    for(let i=0 ; i<estoque.length; i++){
+        if(estoque[i].ano > "2013"){
+            novos++;
+            novoslista.push(estoque[i])
+        }
+    }
+    console.log(novos)
+    console.log(novoslista)
+}

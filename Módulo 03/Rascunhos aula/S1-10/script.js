@@ -82,9 +82,14 @@ const carros = [
     }
 ]
 
+
+//  CONTABILIZANDO OS VEICULOS 
 function contaTotal(estoque){
     return `O estoque de carros tem o total de ${estoque.length}`
 }
+
+
+// SOMATORIO TOTAL DO ESTOQUE 
 function precoTotal(estoque){
     let somatorio = 0;
     for (let i = 0; i < estoque.length; i++){
@@ -93,11 +98,18 @@ function precoTotal(estoque){
     }
     return  `O preço total do estoque é  R$${somatorio.toFixed(2).replace('.',',')}`;
 }
+
+
+
+// FILTRANDO O ESTOQUE POR MARCA 
+
 function filtrarPorMarca(estoque, marcaProcurada){
     const carrosFiltrados = estoque.filter(carro => carro.marca.toLowerCase() === marcaProcurada.toLowerCase());
     return carrosFiltrados;
 }
 
+
+// FILTRANDO O ESTOQUE POR ACESSÓRIO 
 
 function filtrarPorAcessorio(estoque , acessorio){
     let veiculosPorAcessorio =[];
@@ -113,7 +125,7 @@ function filtrarPorAcessorio(estoque , acessorio){
 
 //console.log(filtrarPorAcessorio(carros,"Trava"))
 
-
+// FILTRANDO CARROS COMPLETOS 
 
 function eCarroCompleto(estoque){
     ///let vetorDeCarrosCompletos= [];
@@ -123,22 +135,43 @@ function eCarroCompleto(estoque){
     //    }
     //}
     //return vetorDeCarrosCompletos
-
-
-
     const vetorDeCarrosCompletos = estoque.filter(carro => carro.completo == true)
     return vetorDeCarrosCompletos;
 }
 //console.log(eCarroCompleto(carros))
 
+// ADICIONANDO UM NOVO CARRO A LISTA 
+let carro = {
+    modelo: "tiggo",
+    marca: "chery",
+    ano: "2019",
+    cor: "bege",
+    completo: true,
+    acessorios: ['vidro eletrico','teto'],
+    preco: 70713.33,
+
+}
+function adicionaNovoCarro(novoCarro){
+    carros.push(novoCarro);
+}
+adicionaNovoCarro(carro)
+
+
+
+
+// DELETANDO CARRO DO ESTOQUE 
 
 function deleteCarLIst(estoque, indice){   
-    if ( indice > estoque.length || indice < 0 ){
-        return `valor indefinido`
+    let carrosAtualizados = [];
+    for(let i = 0 ; i < estoque.length; i++){
+        if(i !=indice){
+            carrosAtualizados.push(estoque[i]);
+        }
     }
-    console.log(estoque[indice]) 
-    estoque[indice] = ''
+    if (estoque.length < indice){
+        return 'indice invalido !';
+    }
+    return carrosAtualizados;
+    
 }
-console.log(carros);
-deleteCarLIst(carros,2)
-console.log(carros);
+

@@ -134,3 +134,23 @@ function howManyEmployeesInDepartment(departament){
     }
     return "Departament not found";
 }
+
+const novoFuncionario = {
+    name:'Rosemary',
+    age:44,
+    responsibility: 'Financial expedition director',
+    salary: 15600
+}
+
+function insertNewEmployeeInDepartment(departament, newEmployee){
+    for(let i = 0; i < departmentList.length ; i++ ){
+        for(let i = 0; i < departmentList.length ; i++ ){
+            if(departament==departmentList[i].departmentName){
+                departmentList[i].employees.push(newEmployee);
+                console.log("funcionario adicionado !");
+                return departmentList[i].employees;
+            }
+        }
+        return "Departament not found";
+    }
+}

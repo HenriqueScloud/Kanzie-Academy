@@ -13,3 +13,6 @@ function verificador(Name,CPF){
     }
     return "Não é ganhador !"
 }
+
+
+

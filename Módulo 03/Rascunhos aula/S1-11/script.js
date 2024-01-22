@@ -126,3 +126,11 @@ function giveTheDepartmentABreak(departament) {
     }
 }
 
+function howManyEmployeesInDepartment(departament){
+    for(let i = 0; i < departmentList.length ; i++ ){
+        if(departament==departmentList[i].departmentName){
+            return departmentList[i].employees.length;
+        }
+    }
+    return "Departament not found";
+}

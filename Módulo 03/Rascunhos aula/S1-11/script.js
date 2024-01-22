@@ -87,6 +87,42 @@ const departmentList = [
                     salary: 1500,
                 },
     ],
-    working: true,
+    working: false,
     },
 ];
+
+
+
+function howManyDepartments() {
+    return departmentList.length;
+}
+
+function changeDepartmentName(iName, newName) {
+    for(let i= 0; i <departmentList.length;i++){
+        if (departmentList[i].departmentName === iName){
+            departmentList[i].departmentName = newName;
+            return departmentList[i];
+        }
+    }
+    return "Department not found.";
+}
+
+
+function giveTheDepartmentABreak(departament) {
+    for(let i=0;i<departmentList.length;i++){
+        if(departament==departmentList[i].departmentName){
+            if(departmentList[i].working == false){
+                departmentList[i].working = true;
+                console.log('departamento ativada');
+                return departmentList[i].working;
+            }
+            else{
+                departmentList[i].working = false;
+                console.log('departamento desativada')
+                return departmentList[i].working;
+            }
+            
+        }
+    }
+}
+

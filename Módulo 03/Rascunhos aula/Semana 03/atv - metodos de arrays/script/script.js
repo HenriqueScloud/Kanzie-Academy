@@ -1,0 +1,31 @@
+//Desenvolva sua lógica aqui utlizando o método de array filter e verifique o resultado no console do seu navegador.
+
+//1) Crie uma função para filtrar os hotéis que estão localizados no Brasil
+function filterCountry(array) {
+  return array.filter((hotel)=> hotel.country === "Brazil");
+}
+console.log(filterCountry(data));
+
+// 2) Crie uma função para filtrar os hotéis que possuem o preço igual ou maior que R$200,00.
+function filterPrice(array) {
+  return;
+}
+console.log(filterPrice(data));
+
+//3) Crie uma função para filtrar os hotéis que estão abertos nesse momento (isOpen)
+function filterIsOpen(array) {
+  return;
+}
+console.log(filterIsOpen(data));
+
+//DESAFIO
+//4) Crie uma função que filtre apenas o hotel com o nome “Copacabana Palace”. Após isso, crie outra função para verificar as datas disponíveis para agendamento nesse hotel (isAvaliable).
+function filterHotelName(array) {
+  return;
+}
+
+function filterToBook() {
+  const hotel = filterHotelName(data);
+  return;
+}
+console.log(filterToBook());

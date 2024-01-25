@@ -125,4 +125,8 @@ body{
 }
 .task__button--remove-task{
     border:none;
+    cursor: pointer;
+}
+.task__button--remove-task img{
+    width: 10px;
 }

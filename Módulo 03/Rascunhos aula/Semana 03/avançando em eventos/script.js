@@ -120,3 +120,75 @@ const originalBookList = [
       condition: "novo",
     },
   ];
+
+
+function createBookCard(book){
+
+    // criando tags
+    const liBook = document.createElement('li');
+
+    const divBookInfo = document.createElement('div');
+    const h3BookInfo = document.createElement('h3');
+    const h4BookInfo = document.createElement('h4');
+    const spanBookInfo = document.createElement('span');
+    const divConditionBookInfo = document.createElement('div');
+    const spanConditionMarkerBookInfo = document.createElement('span');
+    const spanConditionDescriptionBookInfo = document.createElement('span');
+    const buttonBookInfo = document.createElement('button');
+    
+
+    //aplicando class nas tags 
+
+    liBook.classList.add('book');
+    divBookInfo.classList.add('book__info');
+    h3BookInfo.classList.add('book__title');
+    h4BookInfo.classList.add('book__author');
+    spanBookInfo.classList.add('book__pages');
+    divConditionBookInfo.classList.add('book__condition');
+    spanConditionMarkerBookInfo.classList.add('condition__marker');
+    spanConditionDescriptionBookInfo.classList.add('condition__description');
+    buttonBookInfo.classList.add("book__delete-btn");
+
+
+    if (book.condition ==="novo"){
+        spanConditionMarkerBookInfo.classList.add('condition__marker--new')
+    }
+    else if(book.condition ==='conservado'){
+        spanConditionMarkerBookInfo.classList.add('condition__marker--fair')
+    }
+    else if(book.condition === 'desgastado'){
+        spanConditionMarkerBookInfo.classList.add('condition__marker--edgeworn')
+    }
+
+    //organizando conteudo da LI
+
+    liBook.append(divBookInfo,buttonBookInfo);
+    divBookInfo.append(h3BookInfo,h4BookInfo,divConditionBookInfo);
+    divConditionBookInfo.append(spanConditionMarkerBookInfo,spanConditionDescriptionBookInfo);
+
+    // aplicando conteudo de texto
+
+    h3BookInfo.innerText = book.title;
+    h4BookInfo.innerText = book.author;
+    spanBookInfo.innerText = `Páginas: ${book.pages}`;
+    spanConditionDescriptionBookInfo.innerText=book.condition;
+    buttonBookInfo.innerText = 'deletar';
+
+
+    return liBook; //// tem que pooooooooooooor o return merda 
+
+
+
+}
+createBookCard(originalBookList);
+
+
+function renderBooks(listBooks){
+    const ulBooks = document.querySelector('.books');
+    listBooks.forEach((book) => {
+        const bookCard = createBookCard(book);
+        ulBooks.appendChild(bookCard)
+    });
+}
+renderBooks(originalBookList);
+

@@ -10,47 +10,64 @@ const tasks = [
   {title: "Pagar a conta de energia", type: "Urgente"},
   {title: "Assistir a um documentário interessante", type: "Normal"},
 ];
-
 function renderElements(array){  
-}
-
-function createTaskItem(array){
-    
-  const newObject = array.map((item) => {
-
-      const li = document.createElement('li');
-      li.classList.add('task__item');
-
-      const div = document.createElement('div');
-      div.classList.add("task-info__container");
-
-      const span = document.createElement("span");
-      span.classList.add("task-type");
-
-      const p = document.createElement('p');
-      p.innerText = item.title;
-
-      const button  = document.createElement("button");
-      button.classList.add('task__button--remove-task')
-      button.innerHTML = '<img src="assets/trash-icon.svg" alt="limpar tarefa"></img>';
-
-      if (item.type == 'normal'){
-        span.classList.add('span-normal')
-      }
-      else if(item.type == 'urgente'){
-        span.classList.add('span-urgent')
-
-      }
-      else{
-        span.classList.add('span-important')
-      }
-      li.append(div,button)
-      div.append(span,p)
-
-  })
+  const ulTasks = document.querySelector('.tasks__list');
+  ulTasks.innerHTML ='';
+  array.forEach((task) => {
+    const newTask = createTaskItem(task);
+    ulTasks.appendChild(newTask);
+  });
 }
 renderElements(tasks);
-
-
-
-
+function createTaskItem(task){
+  //criando tags 
+  const li = document.createElement('li');
+  const div = document.createElement('div');
+  const spanTask_type = document.createElement('span');
+  const p = document.createElement('p');
+  const button = document.createElement('button');
+  //adicionando evento de delete ao botão
+  button.addEventListener('click', () => {
+    const foundIndex = tasks.indexOf(task);
+    tasks.splice(foundIndex,1);
+    renderElements(tasks);
+  });
+  //adicionando as class as tags
+  li.classList.add('task__item');
+  div.classList.add('task-info__container');
+  spanTask_type.classList.add('task-type');
+  button.classList.add('task__button--remove-task');
+  // condicional para urgencias 
+  if(task.type =='Normal' || task.type =='normal'){
+    spanTask_type.classList.add('span-normal');
+  }
+  else if(task.type =='Importante' || task.type =='importante'){
+    spanTask_type.classList.add('span-important');
+  }
+  else if(task.type == 'Urgente'|| task.type == 'urgente'){
+    spanTask_type.classList.add('span-urgent');
+  }
+  // adicionando conteudo das tags 
+  p.innerText = task.title;
+  button.innerHTML = '<img src="assets/trash-icon.svg" alt="limpar tarefa">'
+  // organizando tags dentro de tags 
+  li.append(div,button);
+  div.append(spanTask_type,p);
+  return li;
+}
+createTaskItem(tasks);
+function newTasks(){
+  const form = document.querySelector('.form__container');
+  form.addEventListener('submit', (event)=>{
+    event.preventDefault();
+    const title = document.querySelector('#input_title').value;
+    const type = document.querySelector('.form__input--priority').value;
+    const newTask = {
+      title: title,
+      type: type,
+    };
+    tasks.push(newTask);
+    renderElements(tasks);
+  })
+}
+newTasks();

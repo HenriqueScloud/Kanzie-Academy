@@ -127,6 +127,6 @@ body{
     border:none;
     cursor: pointer;
 }
-.task__button--remove-task img{
+img{
     width: 10px;
 }

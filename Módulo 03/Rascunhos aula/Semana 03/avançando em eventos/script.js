@@ -185,10 +185,37 @@ createBookCard(originalBookList);
 
 function renderBooks(listBooks){
     const ulBooks = document.querySelector('.books');
+    ulBooks.innerHTML = ''
     listBooks.forEach((book) => {
         const bookCard = createBookCard(book);
         ulBooks.appendChild(bookCard)
     });
 }
 renderBooks(originalBookList);
+
+
+function addNewBook(){
+    const form = document.querySelector('.add-book__form');
+    
+    form.addEventListener('submit', function(event){
+        event.preventDefault();
+        console.log('evento ativado!')
+        const title = document.querySelector('#book-title__input').value;
+        const author = document.querySelector('#book-author__input').value;
+        const pages = document.querySelector('#book-pages__input').value;
+        const condition = document.querySelector('#book-condition__select').value;
+
+        const newBokk = {
+            title: title,
+            author: author,
+            pages: pages,
+            condition: condition,
+        }
+        originalBookList.push(newBokk);
+        renderBooks(originalBookList);
+    })
+}
+addNewBook();
+
+
 

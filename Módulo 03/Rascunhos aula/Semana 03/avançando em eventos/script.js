@@ -163,7 +163,7 @@ function createBookCard(book){
     //organizando conteudo da LI
 
     liBook.append(divBookInfo,buttonBookInfo);
-    divBookInfo.append(h3BookInfo,h4BookInfo,divConditionBookInfo);
+    divBookInfo.append(h3BookInfo,h4BookInfo,spanBookInfo,divConditionBookInfo);
     divConditionBookInfo.append(spanConditionMarkerBookInfo,spanConditionDescriptionBookInfo);
 
     // aplicando conteudo de texto
@@ -173,6 +173,13 @@ function createBookCard(book){
     spanBookInfo.innerText = `Páginas: ${book.pages}`;
     spanConditionDescriptionBookInfo.innerText=book.condition;
     buttonBookInfo.innerText = 'deletar';
+
+    //adicionando um evento ao btn de deletar 
+    buttonBookInfo.addEventListener('click',()=> {
+        const foundIndex = originalBookList.indexOf(book);
+        originalBookList.splice(foundIndex,1);
+        renderBooks(originalBookList);
+    })
 
 
     return liBook; //// tem que pooooooooooooor o return merda 
@@ -216,6 +223,4 @@ function addNewBook(){
     })
 }
 addNewBook();
-
-
 

@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Livraria</title>
+
+    <!-- FONTES -->
+    <link
+      target="_blank"
+      href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;500;600;700;800"
+      rel="stylesheet"
+    />
+
+    <!-- ESTILOS -->
+    <link rel="stylesheet" href="./style.css" />
+
+    <!-- SCRIPTS -->
+    <script src="./script.js" defer></script>
+    <script src="./splice-example.js" defer></script>
+  </head>
+  <body>
+    <form class="add-book__form">
+      <h2 class="form__section-title">Cadastrar Livro</h2>
+
+      <label for="book-title">Título</label>
+      <input
+        id="book-title__input"
+        name="book-title"
+        type="text"
+        placeholder="Digite o título do livro"
+      />
+
+      <label for="book-author">Autor</label>
+      <input
+        id="book-author__input"
+        name="book-author"
+        type="text"
+        placeholder="Digite o autor do livro"
+      />
+
+      <label for="book-pages">Páginas</label>
+      <input
+        id="book-pages__input"
+        name="book-pages"
+        type="text"
+        placeholder="Digite a quantidade de páginas"
+      />
+
+      <label for="book-condition">Condição</label>
+      <select name="book-condition" id="book-condition__select">
+        <option value="novo">Novo</option>
+        <option value="conservado">Conservado</option>
+        <option value="desgastado">Desgastado</option>
+      </select>
+
+      <button>Cadastrar</button>
+    </form>
+
+    <section>
+      <h2 class="book__section-title">Lista de Livros</h2>
+      <ul class="books">
+        <!-- LIVRO 1 -->
+        <li class="book">
+          <div class="book__info">
+            <h3 class="book__title">Aprendendo Javascript</h3>
+            <h4 class="book__author">John Doe</h4>
+            <span class="book__pages">Páginas: 200</span>
+            <div class="book__condition">
+              <span class="condition__marker condition__marker--new"></span>
+              <span class="condition__description">Novo</span>
+            </div>
+          </div>
+          <button class="book__delete-btn">Delete</button>
+        </li>
+        <!-- LIVRO 2 -->
+        <li class="book">
+          <div class="book__info">
+            <h3 class="book__title">Aprendendo Javascript 2</h3>
+            <h4 class="book__author">John Doe 2</h4>
+            <span class="book__pages">Páginas: 300</span>
+            <div class="book__condition">
+              <span
+                class="condition__marker condition__marker--edgeworn"
+              ></span>
+              <span class="condition__description">Desgastado</span>
+            </div>
+          </div>
+          <button class="book__delete-btn">Delete</button>
+        </li>
+        <!-- LIVRO 3 -->
+        <li class="book">
+          <div class="book__info">
+            <h3 class="book__title">Aprendendo Javascript 3</h3>
+            <h4 class="book__author">John Doe 3</h4>
+            <span class="book__pages">Páginas: 400</span>
+            <div class="book__condition">
+              <span class="condition__marker condition__marker--fair"></span>
+              <span class="condition__description">Conservado</span>
+            </div>
+          </div>
+          <button class="book__delete-btn">Delete</button>
+        </li>
+      </ul>
+    </section>
+  </body>
+</html>

@@ -1,0 +1,11 @@
+@charset "UTF-8";
+
+@import url(../styles/header.css);
+
+:root{
+    --cor-primary:  #0654ae;
+}
+
+body{
+    background-color: tomato;
+}

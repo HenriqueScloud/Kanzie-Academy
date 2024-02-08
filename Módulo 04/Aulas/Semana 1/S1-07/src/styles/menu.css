@@ -1,0 +1,58 @@
+.menu__section {
+  padding-bottom: 2rem;
+}
+
+.menu__title {
+  font-size: 2.25rem;
+  font-weight: 700;
+
+  text-align: center;
+  padding-block: 2rem;
+}
+
+.menu__food-list {
+  display: flex;
+  justify-content: space-between;
+
+  gap: 1.5rem;
+
+  flex-wrap: wrap;
+}
+
+.food__item {
+  flex-grow: 1;
+  background-color: var(--color-gray-500);
+}
+
+.food__details {
+  display: flex;
+  flex-direction: column;
+
+  align-items: center;
+  justify-content: center;
+
+  gap: 1.938rem;
+
+  padding: 1rem;
+}
+
+.food__title {
+  font-size: 1.5rem;
+}
+
+.food__price {
+}
+
+.food__add-button {
+  display: flex;
+
+  align-items: center;
+  gap: 0.563rem;
+
+  background-color: var(--color-primary);
+
+  border: 2px solid var(--color-gray-100);
+  border-radius: 0.5rem;
+
+  padding: 0.5rem 0.625rem;
+}

@@ -41,6 +41,8 @@
 }
 
 .food__price {
+  border: 1px solid red;
+
 }
 
 .food__add-button {

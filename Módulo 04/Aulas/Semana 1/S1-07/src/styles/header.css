@@ -21,4 +21,5 @@
 }
 
 .header__link {
+  border: 1px solid red;
 }

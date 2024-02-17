@@ -1,0 +1,38 @@
+.popular__section {
+  padding: 1px;
+}
+
+.popular__title {
+  font-size: 2.25rem;
+  font-weight: 700;
+
+  /* display: flex;
+  justify-content: center; */
+
+  text-align: center;
+  padding-block: 2rem;
+  margin-top: 30px;
+}
+
+.popular__cards {
+  display: flex;
+  justify-content: space-between;
+
+  background-color: var(--color-primary);
+
+  border: 2px solid var(--color-gray-100);
+  border-radius: 1rem;
+
+  padding: .5rem .625rem;
+
+  gap: .25rem;
+}
+
+.popular__card {
+padding: .0625rem;
+}
+
+.popular__img {
+  border: 2px solid var(--color-gray-100);
+  border-radius: 1rem;
+}

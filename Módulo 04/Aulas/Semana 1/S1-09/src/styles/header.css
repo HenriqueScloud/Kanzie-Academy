@@ -1,0 +1,26 @@
+.header {
+  background-color: var(--color-primary);
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1.125rem 3rem;
+
+  /* POSITION */
+  position: sticky;
+  top: 0;
+  z-index: 1;
+}
+
+.header__title {
+  font-size: 36px;
+  font-weight: 700;
+}
+
+.header__links {
+  display: flex;
+  gap: 16px;
+}
+
+.header__link:hover {
+  text-decoration: underline;
+}

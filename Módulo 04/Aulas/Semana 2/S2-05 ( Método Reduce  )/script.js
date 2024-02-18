@@ -5,7 +5,9 @@ const persons = [
     { name: 'Alice', age: 35 }
 ];
 const totalAges = persons.reduce((accumulator, person) => {
-    accumulator + person.age;
-    console.log(accumulator)
-,0});
+    accumulator += person.age;
+    console.log(person.name)
+    console.log(person.age)
+    return accumulator;
+},0);
 console.log(totalAges);

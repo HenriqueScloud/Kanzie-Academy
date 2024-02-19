@@ -1,0 +1,22 @@
+.header {
+    display: flex;
+    justify-content: space-between;
+    padding: 1rem 2rem;
+
+
+    background-color: var(--color-gray-700);
+    border-bottom: .0625rem solid var(--color-gray-100);
+    margin-bottom:1rem ;
+
+    position: sticky;
+    top: 0;
+}
+
+.header__title{
+    font-size: 2rem;
+}
+
+.header__dark-mode-btn{
+    background-color: var(--color-gray-700);
+    border: .0625rem solid var(--color-gray-700)
+}

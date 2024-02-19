@@ -3,7 +3,7 @@ export const pokemonList = [
     id: 1,
     name: "bulbassaur",
     img: "src/assets/imgs/bulbassaur.svg",
-    types: ["grass", "poison"],
+    types: ["grass", " poison"],
     hp: 45,
     attack: 25,
     defense: 25,

@@ -1,0 +1,25 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins&display=swap");
+@import url("./reset.css");
+
+:root {
+  /* GRAY SCALE */
+  --color-gray-100: #15171a;
+  --color-gray-300: #2b2f33;
+  --color-gray-500: #ced4da;
+  --color-gray-700: #fdfeff;
+
+  --font-family-primary: "Poppins", sans-serif;
+}
+
+body {
+  font-family: var(--font-family-primary);
+  color: var(--color-gray-100);
+
+  background-color: var(--color-gray-700);
+}
+
+main {
+  max-width: 1024px;
+  margin: 0 auto;
+  padding-inline: 0.5rem;
+}

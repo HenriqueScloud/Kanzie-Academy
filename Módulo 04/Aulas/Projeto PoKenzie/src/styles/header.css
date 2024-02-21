@@ -18,18 +18,17 @@
 
 .header__theme-btn{
     background-color: var(--color-gray-700);
-    background-image: url("/src/assets/icons/moon-solid-atualizado.svg");
+    background-image: url("/src/assets/icons/mon-solid.svg");
     width: 30px;
     height: 30px;
     background-size: contain;
     background-repeat: no-repeat;
     background-position: center;
-    transition: all  .4s ease-in-out;
 }
 
 
 .header__theme-btn--dark{
     background-image: url("/src/assets/icons/sun-solid.svg");
     border: none;
-    transition: all  .0001s ease-out;
+    background-color: transparent;
 }

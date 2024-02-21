@@ -16,7 +16,24 @@
     font-size: 2rem;
 }
 
-.header__dark-mode-btn{
+.header__theme-btn{
     background-color: var(--color-gray-700);
-    border: .0625rem solid var(--color-gray-700)
+    background-image: url("/src/assets/icons/moon-solid-atualizado.svg");
+    width: 30px;
+    height: 30px;
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-color: transparent;
+    transition: all  .4s ease-in-out;
+
+
+}
+
+
+.header__theme-btn--dark{
+    background-image: url("/src/assets/icons/sun-solid.svg");
+    background-color: transparent;
+    border: none;
+    transition: all  .0001s ease-out;
 }

@@ -1,0 +1,35 @@
+body {
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    }
+
+  /* Criando a classe dark-mode para o elemento body */
+body.dark-mode {
+    background-color: black;
+    color: white;
+}
+
+
+
+.dark-mode .button-dark {
+    background-color: whitesmoke;
+    color: black;
+    border: none;
+    border-radius: .5rem;
+    padding: 1rem;
+    font-weight: 700;
+    cursor: pointer;
+    transition:all  .3s ease;
+}
+.button-dark{
+    background-color: black;
+    color: white;
+    border: none;
+    border-radius: .5rem;
+    padding: 1rem;
+    font-weight: 700;
+    cursor: pointer;
+    transition: all .5s;
+}

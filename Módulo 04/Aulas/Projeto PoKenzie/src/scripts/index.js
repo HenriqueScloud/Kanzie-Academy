@@ -5,7 +5,10 @@ function createPokemonCard({id,name,img,types,hp,attack,defense,speed}){
     const liCard = document.createElement('li');
     liCard.classList.add('card');
     const iconState = 'ifavoritado';
-    const favIcon = iconState === 'favoritado' ? `<i class="card__fav fa-solid fa-star"></i>`: `<i class="card__fav fa-regular fa-star"></i>`;
+    const favIcon = iconState === 'favoritado' 
+            ? `<i class="card__fav fa-solid fa-star"></i>`
+            : `<i class="card__fav fa-solid fa-star"></i>`;
+    
     liCard.innerHTML = `
     ${favIcon}
     <p class="card__hp">
@@ -43,4 +46,11 @@ function renderPokemonCards(pokemonArray){
     ulCards.appendChild(pokemonCard);
 });
 }; // renderizando os cards para atualizar a lista de  Pokemons na tela com o banco de dados javascript 
-renderPokemonCards(pokemonList);
+
+
+
+renderPokemonCards(pokemonList); 
+
+import  { handleDarkMode } from './theme.js';
+handleDarkMode()
+

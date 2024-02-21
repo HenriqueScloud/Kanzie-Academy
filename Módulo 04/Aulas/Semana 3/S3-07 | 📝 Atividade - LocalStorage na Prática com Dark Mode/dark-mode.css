@@ -14,7 +14,7 @@ body.dark-mode {
 
 
 .dark-mode .button-dark {
-    background-color: whitesmoke;
+    background-color: rgba(245, 245, 245, 0.645);
     color: black;
     border: none;
     border-radius: .5rem;

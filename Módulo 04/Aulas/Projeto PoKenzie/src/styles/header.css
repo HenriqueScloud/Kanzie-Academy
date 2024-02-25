@@ -19,7 +19,7 @@
 
 .header__theme-btn{
     background-color: var(--color-gray-700);
-    background-image: url("/src/assets/icons/mon-solid.svg");
+    background-image: url("../assets/icons/lua2.png");
     width: 30px;
     height: 30px;
     background-size: contain;
@@ -29,7 +29,7 @@
 
 
 .header__theme-btn--dark{
-    background-image: url("/src/assets/icons/sun-solid.svg");
+    background-image: url("../assets/icons/sun.png");
     border: none;
     background-color: transparent;
 }

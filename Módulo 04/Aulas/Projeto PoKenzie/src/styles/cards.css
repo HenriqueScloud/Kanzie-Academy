@@ -8,14 +8,13 @@
 
 
 .card{
-    border: 1px solid rgb(0, 0, 0);
     padding: 1rem;
     border-radius: .75rem ;
     
     display: flex;
     flex-direction: column;
     gap: .8rem;
-    border: .025rem solid var(--color-gray-300);
+    border: .125rem solid var(--color-gray-300);
 }
 .card__hp{
     width: 3.125rem;
@@ -41,11 +40,13 @@
     text-align: center;
     font-size: 1.5rem;
     font-weight: bold;
+    text-transform: capitalize;
 }
 
 .card__type{
     font-size: .8rem;
     text-align: center;
+    text-transform: capitalize;
 }
 .card__stat{
     text-align: center;
@@ -64,6 +65,7 @@
 .card__fav{
     position:absolute;
     padding: .5rem;
+    cursor: pointer;
 
-    color: #ffd700;
+    color: var(--color-fav-icon);
 }

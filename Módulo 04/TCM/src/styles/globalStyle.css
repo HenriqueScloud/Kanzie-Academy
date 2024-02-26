@@ -1,0 +1,16 @@
+:root {
+    --brand-1: #6f00ff;/*dark mode*/
+    --brand-2: #8629FF;/*liht mode*/
+
+    /* GRAY COLORS */
+
+    --gray-1: #15171A;
+    --gray-2: #212529;
+    --gray-3: #2B2F33;
+    --gray-4: #CED4DA;
+    --gray-5: #DEE2E6;
+    --gray-6: #F1F3F5;
+    --gray-7: #F8F9FA;
+    --gray-8: #FDFEFF;
+
+}

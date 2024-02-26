@@ -1,3 +1,5 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@100..900&display=swap');
+
 :root {
     --brand-1: #6f00ff;/*dark mode*/
     --brand-2: #8629FF;/*liht mode*/
@@ -13,4 +15,13 @@
     --gray-7: #F8F9FA;
     --gray-8: #FDFEFF;
 
+
+    --border-radio: .4rem
+}
+
+
+
+body{
+    font-family: "Inter", sans-serif;
+    color: var(--gray-1);
 }

@@ -137,7 +137,7 @@ function handleStatFilters(pokemonArray){
 
 async function main(){
     //responsavel pela renderização dos cards 
-    const pokemonArray = await mountPokemonArray(200);
+    const pokemonArray = await mountPokemonArray(100);
     renderPokemonCards(pokemonArray); 
 
     // responsavel pelo dark mode 

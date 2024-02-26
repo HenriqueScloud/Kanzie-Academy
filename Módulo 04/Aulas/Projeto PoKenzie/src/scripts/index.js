@@ -53,7 +53,7 @@ function renderPokemonCards(pokemonArray){
 
 async function main(){
     //responsavel pela renderização dos cards 
-    const pokemonArray = await mountPokemonArray(100);
+    const pokemonArray = await mountPokemonArray(50);
     renderPokemonCards(pokemonArray); 
 
     // responsavel pelo dark mode 

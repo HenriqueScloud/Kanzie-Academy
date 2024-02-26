@@ -1,37 +1,333 @@
 <!DOCTYPE html>
 <html lang="pt-BR">
-  <head>
+
+<head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Open Music</title>
     <link rel="stylesheet" href="./src/styles/index.css">
     <script type="module" src="./src/script/index.js"></script>
-  </head>
-  <body>
+</head>
+
+<body>
     <!-- CABEÇALHO -->
     <header class="header">
-      <!-- DESENVOLVA AQUI OS ELEMENTOS DO CABEÇALHO -->
+        <!-- DESENVOLVA AQUI OS ELEMENTOS DO CABEÇALHO -->
 
-      <h1 class="header__title">open music</h1>
-      <button class="header__btn"><img src="src/assets/icons/Theme Button.png" alt=""></button>
+        <nav class="header__nav">
+            <h1 class="header__title">
+                <p class="destacar">open
+                <p class="destacar">music</p>
+                </p>
+            </h1>
+            <button class="header__btn"><img src="src/assets/icons/Theme Button.png" alt="icon-dark-mode"></button>
+        </nav>
     </header>
 
     <!-- CONTEÚDO PRINCIPAL -->
     <main>
-      <!-- SEÇÃO DE FILTRO POR GENERO -->
-      <section>
-        <!-- DESENVOLVA AQUI OS ELEMENTOS DA SEÇÃO -->
-      </section>
+        <!-- SEÇÃO DE FILTRO POR GENERO -->
+        <section class="filtro__genre-section">
+            <h1 class="filtro__genre-title">Gênero Musical</h1>
+            <ul class="filtros__genres">
+                <li><button class="filtro__genre-btn">Todos</button></li>
+                <li><button class="filtro__genre-btn">Pop</button></li>
+                <li><button class="filtro__genre-btn">MPB</button></li>
+                <li><button class="filtro__genre-btn">Forró</button></li>
+                <li><button class="filtro__genre-btn">Samba</button></li>
+                <li><button class="filtro__genre-btn">Baião</button></li>
+                <li><button class="filtro__genre-btn">Rap</button></li>
+                <li><button class="filtro__genre-btn filtro__genre-btn--ativo
+">Hip-Hop</button></li>
+            </ul>
+        </section>
 
-      <!-- SEÇÃO DE FILTRO POR PREÇO -->
-      <section>
-        <!-- DESENVOLVA AQUI OS ELEMENTOS DA SEÇÃO -->
-      </section>
 
-      <!-- SEÇÃO DE ALBUNS -->
-      <section>
-        <!-- DESENVOLVA AQUI OS ELEMENTOS DA SEÇÃO -->
-      </section>
+        <!-- SEÇÃO DE FILTRO POR PREÇO -->
+        <section class="price__range-section">
+            <div class="price__range-container-title">
+                <h1 class="price__range-title">Definir Preço </h1>
+                <p>Até <span>R$ <span class="price-range-value">100</span></span></p>
+            </div>
+            <input type="range" name="" id="price__range-input">
+        </section>
+
+        <!-- SEÇÃO DE ALBUNS -->
+        <section class="albuns-section">
+
+            <!-- DESENVOLVA AQUI OS ELEMENTOS DA SEÇÃO -->
+            <h1 class="albuns-title">Albuns Encontrados </h1>
+
+            <ul class="albun__cards">
+                <li class="albun__card">
+                    <img src="src/assets/img/Album img 1png.png" alt="Imagem do Album 1" class="albun__card-img">
+
+                    <div class="albun__card-description">
+                        <h1 class="albun__card-title">Acabou o Chorare</h1>
+
+                        <div class="albun__card-details">
+                            <p class="albun__card-detail--autor">Novos Baianos</p>
+                            <span class="albun__card-detail--genre">MPB</span>
+                        </div>
+
+                        <div class="albun__card-price">
+                            <p class="albun__card-price-valor">R$ <span class="albun__card-price-value">137,91</span></p>
+                            <button class="albun__card-price-btn">Comprar</button>
+                        </div>
+
+                    </div>
+
+                </li>
+
+
+
+
+
+
+
+
+
+                <li class="albun__card">
+                    <img src="src/assets/img/Album img 1png.png" alt="Imagem do Album 1" class="albun__card-img">
+
+                    <div class="albun__card-description">
+                        <h1 class="albun__card-title">Acabou o Chorare</h1>
+
+                        <div class="albun__card-details">
+                            <p class="albun__card-detail--autor">Novos Baianos</p>
+                            <span class="albun__card-detail--genre">MPB</span>
+                        </div>
+                        
+                        <div class="albun__card-price">
+                            <p class="albun__card-price-valor">R$ <span class="albun__card-price-value">137,91</span></p>
+                            <button class="albun__card-price-btn">Comprar</button>
+                        </div>
+
+                    </div>
+
+                </li>
+
+
+
+
+
+
+
+
+
+
+                <li class="albun__card">
+                    <img src="src/assets/img/Album img 1png.png" alt="Imagem do Album 1" class="albun__card-img">
+
+                    <div class="albun__card-description">
+                        <h1 class="albun__card-title">Acabou o Chorare</h1>
+
+                        <div class="albun__card-details">
+                            <p class="albun__card-detail--autor">Novos Baianos</p>
+                            <span class="albun__card-detail--genre">MPB</span>
+                        </div>
+                        
+                        <div class="albun__card-price">
+                            <p class="albun__card-price-valor">R$ <span class="albun__card-price-value">137,91</span></p>
+                            <button class="albun__card-price-btn">Comprar</button>
+                        </div>
+
+                    </div>
+
+                </li>
+
+
+
+
+
+
+
+
+
+                <li class="albun__card">
+                    <img src="src/assets/img/Album img 1png.png" alt="Imagem do Album 1" class="albun__card-img">
+
+                    <div class="albun__card-description">
+                        <h1 class="albun__card-title">Acabou o Chorare</h1>
+
+                        <div class="albun__card-details">
+                            <p class="albun__card-detail--autor">Novos Baianos</p>
+                            <span class="albun__card-detail--genre">MPB</span>
+                        </div>
+                        
+                        <div class="albun__card-price">
+                            <p class="albun__card-price-valor">R$ <span class="albun__card-price-value">137,91</span></p>
+                            <button class="albun__card-price-btn">Comprar</button>
+                        </div>
+
+                    </div>
+
+                </li>
+
+
+
+
+
+
+
+
+
+                
+
+
+
+                <li class="albun__card">
+                    <img src="src/assets/img/Album img 1png.png" alt="Imagem do Album 1" class="albun__card-img">
+
+                    <div class="albun__card-description">
+                        <h1 class="albun__card-title">Acabou o Chorare</h1>
+
+                        <div class="albun__card-details">
+                            <p class="albun__card-detail--autor">Novos Baianos</p>
+                            <span class="albun__card-detail--genre">MPB</span>
+                        </div>
+                        
+                        <div class="albun__card-price">
+                            <p class="albun__card-price-valor">R$ <span class="albun__card-price-value">137,91</span></p>
+                            <button class="albun__card-price-btn">Comprar</button>
+                        </div>
+
+                    </div>
+
+                </li>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+                <li class="albun__card">
+                    <img src="src/assets/img/Album img 1png.png" alt="Imagem do Album 1" class="albun__card-img">
+
+                    <div class="albun__card-description">
+                        <h1 class="albun__card-title">Acabou o Chorare</h1>
+
+                        <div class="albun__card-details">
+                            <p class="albun__card-detail--autor">Novos Baianos</p>
+                            <span class="albun__card-detail--genre">MPB</span>
+                        </div>
+                        
+                        <div class="albun__card-price">
+                            <p class="albun__card-price-valor">R$ <span class="albun__card-price-value">137,91</span></p>
+                            <button class="albun__card-price-btn">Comprar</button>
+                        </div>
+
+                    </div>
+
+                </li>
+
+
+
+
+
+
+
+
+
+
+
+
+
+                <li class="albun__card">
+                    <img src="src/assets/img/Album img 1png.png" alt="Imagem do Album 1" class="albun__card-img">
+
+                    <div class="albun__card-description">
+                        <h1 class="albun__card-title">Acabou o Chorare</h1>
+
+                        <div class="albun__card-details">
+                            <p class="albun__card-detail--autor">Novos Baianos</p>
+                            <span class="albun__card-detail--genre">MPB</span>
+                        </div>
+                        
+                        <div class="albun__card-price">
+                            <p class="albun__card-price-valor">R$ <span class="albun__card-price-value">137,91</span></p>
+                            <button class="albun__card-price-btn">Comprar</button>
+                        </div>
+
+                    </div>
+
+                </li>
+
+
+
+
+
+
+
+
+
+
+
+
+                <li class="albun__card">
+                    <img src="src/assets/img/Album img 1png.png" alt="Imagem do Album 1" class="albun__card-img">
+
+                    <div class="albun__card-description">
+                        <h1 class="albun__card-title">Acabou o Chorare</h1>
+
+                        <div class="albun__card-details">
+                            <p class="albun__card-detail--autor">Novos Baianos</p>
+                            <span class="albun__card-detail--genre">MPB</span>
+                        </div>
+                        
+                        <div class="albun__card-price">
+                            <p class="albun__card-price-valor">R$ <span class="albun__card-price-value">137,91</span></p>
+                            <button class="albun__card-price-btn">Comprar</button>
+                        </div>
+
+                    </div>
+
+                </li>
+
+
+
+
+
+
+
+                <li class="albun__card">
+                    <img src="src/assets/img/Album img 1png.png" alt="Imagem do Album 1" class="albun__card-img">
+
+                    <div class="albun__card-description">
+                        <h1 class="albun__card-title">Acabou o Chorare</h1>
+
+                        <div class="albun__card-details">
+                            <p class="albun__card-detail--autor">Novos Baianos</p>
+                            <span class="albun__card-detail--genre">MPB</span>
+                        </div>
+                        
+                        <div class="albun__card-price">
+                            <p class="albun__card-price-valor">R$ <span class="albun__card-price-value">137,91</span></p>
+                            <button class="albun__card-price-btn">Comprar</button>
+                        </div>
+
+                    </div>
+
+                </li>
+
+
+
+
+                
+            </ul>
+
+
+        </section>
     </main>
-  </body>
+</body>
+
 </html>

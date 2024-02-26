@@ -5,7 +5,7 @@
 
 
     background-color: var(--color-gray-700);
-    border-bottom: .0625rem solid var(--color-gray-100);
+    border-bottom: .0625rem solid var(--color-gray-700);
     margin-bottom:1rem ;
 
     position: sticky;
@@ -15,6 +15,7 @@
 
 .header__title{
     font-size: 2rem;
+    color: var(--color-gray-100);
 }
 
 .header__theme-btn{

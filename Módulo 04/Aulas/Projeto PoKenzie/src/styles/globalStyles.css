@@ -11,7 +11,7 @@
   --font-family-primary: "Poppins", sans-serif;
 
 
-  --color-fav-icon: #f5a91b;
+  --color-fav-icon: #ffd000;
 }
 
 .dark-mode:root{
@@ -20,16 +20,25 @@
   --color-gray-300: #ced4da;
   --color-gray-100: #fdfeff;
 
-  --color-fav-icon: #ffd700;
+  --color-fav-icon: #fbff00;
+}
+
+.dark-mode body{
+  background-image: url(../assets/imgs/pokemonDarkBackground.webp);
 }
 
 
 
 body {
   font-family: var(--font-family-primary);
-  color: var(--color-gray-100);
+  color: var(--color-gray-700);
 
-  background-color: var(--color-gray-700);
+  background-image: url(../assets/imgs/pokemonBackground.jpg);
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+
 }
 
 main {

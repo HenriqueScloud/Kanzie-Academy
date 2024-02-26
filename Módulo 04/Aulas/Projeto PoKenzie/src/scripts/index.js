@@ -1,20 +1,15 @@
 
 //import { pokemonList } from "./pokeDatabase.js";
 import { mountPokemonArray } from "./api.js";
-
 import  { handleDarkMode } from './theme.js';
 
 
 function createPokemonCard({id,name,img,types,hp,attack,defense,speed}){
     const liCard = document.createElement('li');
     liCard.classList.add('card');
-    const iconState = 'ifavoritado';
-    const favIcon = iconState === 'favoritado' 
-    ? `<i class="card__fav fa-solid fa-star"></i>`
-    : `<i class="card__fav fa-solid fa-star"></i>`;
-    
+
     liCard.innerHTML = `
-    ${favIcon}
+    <i class="card__fav fa-regular fa-star"></i>
     <p class="card__hp">
     <span>HP</span>
     ${hp}
@@ -25,7 +20,7 @@ function createPokemonCard({id,name,img,types,hp,attack,defense,speed}){
     alt="Imagem do Pokemon ${name}"
     />
     <h2 class="card__name">${name}</h2>
-    <small class="card__type">${types}</small>
+    <small class="card__type">${types.join(' - ')}</small>
     <ul class="card__stats">
     <li class="card__stat">
     <h3 class="stat__value">${attack}</h3>
@@ -39,17 +34,113 @@ function createPokemonCard({id,name,img,types,hp,attack,defense,speed}){
     <h3 class="stat__value">${speed}</h3>
     <p class="stat__type">VEL</p>
     </li>
-    </ul>`
+    </ul>`;
+
+
+    const favIcon = liCard.querySelector('.card__fav');
+    handleFavoriteEvent(favIcon);
+
     return liCard;
 };// criando os cards 
 
+
+
+
+
+
+
+
+
+
 function renderPokemonCards(pokemonArray){
+
     const ulCards = document.querySelector('.cards');
+    ulCards.innerHTML=''
     pokemonArray.forEach((pokemonInfo)=>{
         const pokemonCard = createPokemonCard(pokemonInfo)
         ulCards.appendChild(pokemonCard);
     });
-}; // renderizando os cards para atualizar a lista de  Pokemons na tela com o banco de dados javascript 
+}; // renderizando os cards para atualizar a lista de  Pokemons na tela com o banco de dados javascript.
+
+
+
+
+
+
+
+
+
+
+
+function handleFavoriteEvent(btnFav){
+
+    btnFav.addEventListener('click', (event)=>{
+        btnFav.classList.toggle('fa-solid');
+        btnFav.classList.toggle('fa-regular');
+    });
+};
+
+
+
+
+
+
+
+
+
+
+function handleStatFilters(pokemonArray){
+    const  filters = document.querySelector(".filter__form");
+    
+    const attackFIlterInput = document.querySelector('#attack__ranger-filter');
+    const defenseFIlterInput = document.querySelector('#defense__ranger-filter');
+    const speedFIlterInput = document.querySelector('#speed__ranger-filter'); 
+
+    
+    
+    
+    filters.addEventListener('input', (event)=>{
+        const currentFilterLabel = event.target.previousElementSibling;
+        
+        const currentFilterSpanLabel = currentFilterLabel.querySelector( 'span' );
+        
+        const currentInputValue = event.target.valueAsNumber;
+        
+        currentFilterSpanLabel.innerText = currentInputValue;
+        
+        const attackValue = attackFIlterInput.valueAsNumber
+        const defenseValue = defenseFIlterInput.valueAsNumber;
+        const speedValue = speedFIlterInput.valueAsNumber;
+
+        console.log(attackValue)
+
+
+
+        const filteredPokemonArray = pokemonArray.filter((pokemon) => { 
+            return (pokemon.attack <= attackValue &&
+                pokemon.defense <= defenseValue &&
+                pokemon.speed <= speedValue);
+        });
+        console.log(filteredPokemonArray)
+        renderPokemonCards(filteredPokemonArray);
+    });
+
+};
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 async function main(){
     //responsavel pela renderização dos cards 
@@ -58,6 +149,8 @@ async function main(){
 
     // responsavel pelo dark mode 
     handleDarkMode();
+
+    handleStatFilters(pokemonArray);
     
 };
 main();

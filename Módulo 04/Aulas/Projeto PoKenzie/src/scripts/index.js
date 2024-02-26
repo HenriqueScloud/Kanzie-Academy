@@ -55,7 +55,7 @@ function createPokemonCard({id,name,img,types,hp,attack,defense,speed}){
 function renderPokemonCards(pokemonArray){
 
     const ulCards = document.querySelector('.cards');
-    ulCards.innerHTML=''
+    ulCards.innerHTML=''; // limpa o container antes de adicionar novos elementos
     pokemonArray.forEach((pokemonInfo)=>{
         const pokemonCard = createPokemonCard(pokemonInfo)
         ulCards.appendChild(pokemonCard);
@@ -92,9 +92,9 @@ function handleFavoriteEvent(btnFav){
 function handleStatFilters(pokemonArray){
     const  filters = document.querySelector(".filter__form");
     
-    const attackFIlterInput = document.querySelector('#attack__ranger-filter');
-    const defenseFIlterInput = document.querySelector('#defense__ranger-filter');
-    const speedFIlterInput = document.querySelector('#speed__ranger-filter'); 
+    const attackFIlterInput = document.querySelector('#attack__range-filter');
+    const defenseFIlterInput = document.querySelector('#defense__range-filter');
+    const speedFIlterInput = document.querySelector('#speed__range-filter'); 
 
     
     
@@ -103,25 +103,18 @@ function handleStatFilters(pokemonArray){
         const currentFilterLabel = event.target.previousElementSibling;
         
         const currentFilterSpanLabel = currentFilterLabel.querySelector( 'span' );
-        
         const currentInputValue = event.target.valueAsNumber;
-        
         currentFilterSpanLabel.innerText = currentInputValue;
         
-        const attackValue = attackFIlterInput.valueAsNumber
+        const attackValue = attackFIlterInput.valueAsNumber;
         const defenseValue = defenseFIlterInput.valueAsNumber;
         const speedValue = speedFIlterInput.valueAsNumber;
 
-        console.log(attackValue)
-
-
-
-        const filteredPokemonArray = pokemonArray.filter((pokemon) => { 
-            return (pokemon.attack <= attackValue &&
-                pokemon.defense <= defenseValue &&
-                pokemon.speed <= speedValue);
+        const filteredPokemonArray = pokemonArray.filter(({attack,defense,speed}) => { 
+            return (attack <= attackValue &&
+                    defense <= defenseValue &&
+                    speed <= speedValue);
         });
-        console.log(filteredPokemonArray)
         renderPokemonCards(filteredPokemonArray);
     });
 
@@ -144,7 +137,7 @@ function handleStatFilters(pokemonArray){
 
 async function main(){
     //responsavel pela renderização dos cards 
-    const pokemonArray = await mountPokemonArray(50);
+    const pokemonArray = await mountPokemonArray();
     renderPokemonCards(pokemonArray); 
 
     // responsavel pelo dark mode 

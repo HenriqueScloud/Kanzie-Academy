@@ -9,6 +9,9 @@
   --color-gray-700: #fdfeff;
 
   --font-family-primary: "Poppins", sans-serif;
+
+
+  --color-fav-icon: #f5a91b;
 }
 
 .dark-mode:root{
@@ -17,7 +20,10 @@
   --color-gray-300: #ced4da;
   --color-gray-100: #fdfeff;
 
+  --color-fav-icon: #ffd700;
 }
+
+
 
 body {
   font-family: var(--font-family-primary);

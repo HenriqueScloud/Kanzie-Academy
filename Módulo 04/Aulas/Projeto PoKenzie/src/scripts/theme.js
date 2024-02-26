@@ -17,9 +17,9 @@ export function handleDarkMode(){
     function themeJustify(){
         darkMode = JSON.parse(localStorage.getItem("theme")); 
         if (darkMode) {
-            darkModeButtom.classList.add('header__theme-btn--dark')
-            html.classList.add('dark-mode')
+            darkModeButtom.classList.add('header__theme-btn--dark');
+            html.classList.add('dark-mode');
         }
     }
-    themeJustify()
+    themeJustify();
 }

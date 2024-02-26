@@ -1,0 +1,26 @@
+.filter__form{
+    padding-block: 1rem;
+    display: flex;
+    flex-direction: column;
+    max-width: 864px;
+    margin: .9375rem auto;
+    padding-inline: 0.5rem;
+    border: .125rem solid var(--color-gray-300) ;
+    border-radius: .75rem;
+    gap: 1.1rem;
+
+}
+
+
+.filter__label{
+    font-size: 1.8rem;
+    margin-top: 1.5rem;
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    gap: 1rem;
+}
+.filter__label > span {
+    font-weight: 900;
+    font-family: 'Courier New', sans-serif, monospace;
+}

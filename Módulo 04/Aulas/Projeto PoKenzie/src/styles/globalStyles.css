@@ -36,4 +36,7 @@ main {
   max-width: 1024px;
   margin: 0 auto;
   padding-inline: 0.5rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
 }

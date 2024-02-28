@@ -19,25 +19,25 @@
     flex-wrap: wrap;
     justify-content: space-between;
     gap: 1rem;
-    
 
 }
-.albun__card{
-    background-color: var(--gray-7);
-    min-width: 19.25rem;
-    margin-bottom: 1rem;
-    
 
-    flex: 1 0 calc(33.33% - 1rem);
+.albun__card{
+    width: 308px;
+    background-color: var(--color-gray-7);
+    border-radius: 0.25rem;
+    flex-grow: 1;
 }
 .albun__card:hover{
     background-color: var(--gray-5);
 }
 .albun__card-img{
-    border-radius: .3125rem .3125rem 0 0;
-    object-fit: cover;
     width: 100%;
+    height: 290px;
+    object-fit: cover;
+    object-position: center;
 }
+
 
 .albun__card-description{
     padding: .5rem;

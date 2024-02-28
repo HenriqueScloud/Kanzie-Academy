@@ -9,7 +9,7 @@
     <script type="module" src="./src/script/index.js"></script>
 </head>
 
-<body>
+<body class="">
     <!-- CABEÇALHO -->
     <header class="header">
         <!-- DESENVOLVA AQUI OS ELEMENTOS DO CABEÇALHO -->
@@ -20,7 +20,7 @@
                 <p class="destacar">music</p>
                 </p>
             </h1>
-            <button class="header__btn"><img src="src/assets/icons/Theme Button.png" alt="icon-dark-mode"></button>
+            <button class="header__theme-btn"></button>
         </nav>
     </header>
 
@@ -30,14 +30,14 @@
         <section class="filtro__genre-section">
             <h1 class="filtro__genre-title">Gênero Musical</h1>
             <ul class="filtros__genres">
-                <li class="filtro__genre-btn">Todos</li>
+                <li class="filtro__genre-btn filtro__genre-btn--ativo">Todos</li>
                 <li class="filtro__genre-btn">Pop</li>
                 <li class="filtro__genre-btn">MPB</li>
                 <li class="filtro__genre-btn">Forró</li>
                 <li class="filtro__genre-btn">Samba</li>
                 <li class="filtro__genre-btn">Baião</li>
                 <li class="filtro__genre-btn">Rap</li>
-                <li class="filtro__genre-btn filtro__genre-btn--ativo
+                <li class="filtro__genre-btn 
 ">Hip-Hop</></li>
             </ul>
         </section>
@@ -47,15 +47,15 @@
         <section class="price__range-section">
             <div class="price__range-container-title">
                 <h1 class="price__range-title">Definir Preço </h1>
-                <p>Até <span>R$ <span class="price-range-value">100</span></span></p>
+                <p>Até <span>R$ <span class="price-range-value">150</span></span></p>
             </div>
 
             <input  type="range" 
                     name="range"   
                     id="price__range-input" 
-                    max="100" 
+                    max="150" 
                     min="0" 
-                    value="100" >
+                    value="150" >
 
         </section>
 

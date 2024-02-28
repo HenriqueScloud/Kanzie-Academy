@@ -1,6 +1,7 @@
-import {  selectedFiltroGenre  } from './theme.js';
-import {  applyInputRangeStyle  } from './inputRange.js';
+import {  selectedFiltroGenre  } from './selectedFiltroGenre.js';
+import {  applyInputRangeStyle, handleStatFilters  } from './inputRange.js';
 import {  albumList  } from './albumsDatabase.js';
+import {  ThemeDarkMode  } from './theme.js';
 
 
 
@@ -40,7 +41,12 @@ function creatCardsAlbumList(albumCardDataBase){
 
 
 
-function renderAlbumListCards(albumDataBase){
+export function renderAlbumListCards(albumDataBase){
+
+    const ulAlbunsCards = document.querySelector('.albun__cards');
+    ulAlbunsCards.innerHTML='';
+
+
     for(let i = 0; i<albumDataBase.length;i++){
         creatCardsAlbumList(albumDataBase[i])
     };
@@ -62,6 +68,8 @@ function routine(){
     selectedFiltroGenre();
     applyInputRangeStyle();
     renderAlbumListCards(albumList);
+    ThemeDarkMode();
+    handleStatFilters();
 
 
 

@@ -20,8 +20,32 @@
 }
 
 
+.darkMode:root{
+
+    --brand-1: #6f00ff;/*dark mode*/
+    --brand-2: #8629FF;/*liht mode*/
+
+    /* GRAY COLORS */
+
+    --gray-8: #15171A;
+    --gray-7: #212529;
+    --gray-6: #2B2F33;
+    --gray-5: #CED4DA;
+    --gray-4: #DEE2E6;
+    --gray-3: #F1F3F5;
+    --gray-2: #F8F9FA;
+    --gray-1: #FDFEFF;
+
+
+    --border-radio: .4rem
+
+}
+
+
 
 body{
     font-family: "Inter", sans-serif;
     color: var(--gray-1);
+    background-color: var(--gray-8);
+
 }

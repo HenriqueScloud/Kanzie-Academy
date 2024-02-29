@@ -23,7 +23,7 @@
     cursor: pointer;
     width: 100%;
     outline: none;
-    background-color: var(--brand-1);
+    background-color: var(--brand-2);
     border-radius: 0.5rem;
     height: 0.5rem;
 }
@@ -35,7 +35,7 @@
     width: 30px;
     background-color: var(--gray-5);
     border-radius: 50%;
-    border: 0.5rem solid var(--brand-1);
+    border: 0.5rem solid var(--brand-2);
 }
 
 .price__range-container-title {
@@ -50,6 +50,6 @@
 
 }
 
-.price__range-container-title p span{
-    color: var(--brand-1);
+.price__range-container-title p span {
+    color: var(--brand-2);
 }

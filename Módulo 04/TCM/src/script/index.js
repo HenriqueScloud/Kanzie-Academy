@@ -7,9 +7,7 @@ import {  fetchAlbuns  } from './api.js';
 
 function creatCardsAlbumList({img,title,genre,price,band}){
 
-    const ulAlbunsCards = document.querySelector('.albun__cards');
-    let li = document.createElement('li')
-    li.innerHTML = `
+    const li = `
     <li class="albun__card">
         <img src="${img}" alt="Imagem do Album 1" class="albun__card-img">
         <div class="albun__card-description">
@@ -25,16 +23,30 @@ function creatCardsAlbumList({img,title,genre,price,band}){
         </div>
     </li>
     `;
-    ulAlbunsCards.appendChild(li);
+
+
+
+
+
+
+
+
+    return li;
 }
 
 export async function renderAlbumListCards(albumData) {
     const ulAlbunsCards = document.querySelector('.albun__cards');
     ulAlbunsCards.innerHTML = '';
+
+    
     const albumDataBase = await albumData;
     for (let i = 0; i < albumDataBase.length; i++) {
-        creatCardsAlbumList(albumDataBase[i]);
+        ulAlbunsCards.innerHTML += creatCardsAlbumList(albumDataBase[i]);
     }
+
+
+
+    console.log(ulAlbunsCards)
 }
 async function routine() {
     selectedFiltroGenre();

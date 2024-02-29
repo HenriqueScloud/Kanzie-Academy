@@ -22,13 +22,12 @@
     justify-content: space-between;
     gap: 1rem;
 
+
 }
 
 .albun__card{
-
-    display: flex;
-    flex-direction: column;
-    width: 308px;
+    flex-grow: 1;
+    width: 19.25rem;
     background-color: var(--color-gray-7);
     border-radius: 0.25rem;
     flex-grow: 1;
@@ -81,7 +80,7 @@
     height: 2.5rem;
     width: 5.4375rem;
     background-color: var(--brand-2);
-    color: var(--gray-8);
+    color: var(--gray-5);
     border-radius: var(--border-radio);
     cursor: pointer;
 }

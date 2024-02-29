@@ -1,26 +1,17 @@
 import {  selectedFiltroGenre  } from './selectedFiltroGenre.js';
 import {  applyInputRangeStyle, handleStatFilters  } from './inputRange.js';
-import {  albumList  } from './albumsDatabase.js';
 import {  ThemeDarkMode  } from './theme.js';
+import {  fetchAlbuns  } from './api.js';
 
 
 
-function creatCardsAlbumList(albumCardDataBase){
+function creatCardsAlbumList({img,title,genre,price,band}){
 
     const ulAlbunsCards = document.querySelector('.albun__cards');
-
-    const band = albumCardDataBase.band;
-    const title = albumCardDataBase.title;
-    const genre = albumCardDataBase.genre;
-    const price = albumCardDataBase.price;
-    const img = albumCardDataBase.img;
-
-
     let li = document.createElement('li')
     li.innerHTML = `
-
     <li class="albun__card">
-        <img src=${img} alt="Imagem do Album 1" class="albun__card-img">
+        <img src="${img}" alt="Imagem do Album 1" class="albun__card-img">
         <div class="albun__card-description">
             <h1 class="albun__card-title">${title}</h1>
             <div class="albun__card-details">
@@ -37,43 +28,19 @@ function creatCardsAlbumList(albumCardDataBase){
     ulAlbunsCards.appendChild(li);
 }
 
-
-
-
-
-export function renderAlbumListCards(albumDataBase){
-
+export async function renderAlbumListCards(albumData) {
     const ulAlbunsCards = document.querySelector('.albun__cards');
-    ulAlbunsCards.innerHTML='';
-
-
-    for(let i = 0; i<albumDataBase.length;i++){
-        creatCardsAlbumList(albumDataBase[i])
-    };
-};
-
-
-
-
-
-
-
-
-
-
-
-
-
-function routine(){
+    ulAlbunsCards.innerHTML = '';
+    const albumDataBase = await albumData;
+    for (let i = 0; i < albumDataBase.length; i++) {
+        creatCardsAlbumList(albumDataBase[i]);
+    }
+}
+async function routine() {
     selectedFiltroGenre();
     applyInputRangeStyle();
-    renderAlbumListCards(albumList);
+    renderAlbumListCards(await fetchAlbuns());
     ThemeDarkMode();
-    handleStatFilters();
-
-
-
-
-
+    handleStatFilters(await fetchAlbuns());
 }
 routine();

@@ -1,0 +1,55 @@
+.price__range-section {
+
+    margin: 0 .625rem;
+    max-width: 64rem;
+    margin: 1.5625rem auto;
+    padding: 1.625rem .625rem;
+}
+
+
+.price__range-title {
+
+    font-size: 1.5rem;
+    font-weight: bold;
+    padding: 1rem 0;
+}
+
+
+/* Selecionando o elemento input range (selecione por id ou classe) */
+#price__range-input {
+    -webkit-appearance: none;
+    appearance: none;
+    background: transparent;
+    cursor: pointer;
+    width: 100%;
+    outline: none;
+    background-color: var(--brand-2);
+    border-radius: 0.5rem;
+    height: 0.5rem;
+}
+
+#price__range-input::-webkit-slider-thumb {
+    -webkit-appearance: none;
+    appearance: none;
+    height: 30px;
+    width: 30px;
+    background-color: var(--gray-5);
+    border-radius: 50%;
+    border: 0.5rem solid var(--brand-2);
+}
+
+.price__range-container-title {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.price__range-container-title p {
+    font-size: 1.2rem;
+    font-weight: bold;
+
+}
+
+.price__range-container-title p span {
+    color: var(--brand-2);
+}

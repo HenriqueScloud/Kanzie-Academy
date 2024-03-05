@@ -1,6 +1,8 @@
 export const Header = () => {
     return (<>
-        <h1>meu header</h1>
+        <header>
+            <h1>meu header</h1>
+        </header>
     </>
     )
 }

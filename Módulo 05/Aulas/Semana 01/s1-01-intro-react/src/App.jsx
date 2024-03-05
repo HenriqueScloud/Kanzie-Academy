@@ -1,8 +1,14 @@
+import "./styles/index.css"
+import { Header } from "./components/Header";
+import { BookSection } from "./components/bookSection";
+
 function App() {
   return (
-    <h1>Titulo 1</h1>
+    <div>
+      <Header />
+      <BookSection/>
+    </div>
   );
 }
-
 
 export default App;

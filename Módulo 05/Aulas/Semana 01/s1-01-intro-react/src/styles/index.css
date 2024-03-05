@@ -20,14 +20,21 @@ body{
 
 h2,.books-list{
     padding-block: .5rem;
+    margin: 1rem auto;
 }
 
 .book-item{
     background-color: #212529;
     padding: 1rem;
+    border-radius: .3rem;
     margin-bottom: 1rem;
 
     display: flex;
     justify-content: space-between;
     align-items: center;
+}
+
+header{
+    border: 2px solid white;
+    padding: 1rem;
 }

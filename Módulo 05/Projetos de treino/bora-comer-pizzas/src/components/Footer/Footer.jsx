@@ -1,8 +1,5 @@
 import logo from "../../assets/icons/logo.png";
-
-
 export const Footer = () =>{
-
     return(
         <>
             <footer>

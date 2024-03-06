@@ -1,7 +1,6 @@
 
 import { pizzasList } from "../../Database/DataBase.js";
 export const MainSection = () =>{
-
     return(
         <>
             <section>

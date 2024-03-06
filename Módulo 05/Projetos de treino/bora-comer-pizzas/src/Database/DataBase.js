@@ -1,10 +1,8 @@
-
 import img1 from "../assets/images/pizza1.jpg";
 import img2 from "../assets/images/pizza2.jpg";
 import img3 from "../assets/images/pizza3.jpg";
 import img4 from "../assets/images/pizza4.jpg";
 import img5 from "../assets/images/pizza5.jpg";
-
 export const pizzasList = [
     {
         id: 1,

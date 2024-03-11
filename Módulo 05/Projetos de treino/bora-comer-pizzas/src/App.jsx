@@ -1,8 +1,9 @@
 
-import "./styles/index.css"
+import "./styles/index.css";//aplicado em nivel global
+
 import { Header } from "./components/Header/Header";
-import { TitleSection } from "./components/titleSection/titleSection";
-import { MainSection } from "./components/MainSection/MainSection";
+import { TitleSection } from "./components/Sections/titleSection/titleSection";
+import { MainSection } from ".//components/Sections/MainSection/MainSection";
 import { Footer } from "./components/Footer/Footer";
 function App() {
   return (
@@ -17,3 +18,4 @@ function App() {
   )
 }
 export default App
+

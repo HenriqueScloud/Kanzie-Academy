@@ -1,0 +1,8 @@
+.btn{
+    background-color: var(--color-100);
+    color: var(--color-900);
+    font-family: var(--font-secundary);
+    padding: 1.25rem 1.875rem;
+    letter-spacing: 2.5px;
+    font-weight: 700;
+}

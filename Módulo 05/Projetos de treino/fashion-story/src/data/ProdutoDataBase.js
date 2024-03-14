@@ -1,7 +1,7 @@
-import ProductImg1 from "../assets/Rectangle 4.png";
-import ProductImg2 from "../assets/Rectangle 6.png";
-import ProductImg3 from "../assets/Rectangle 7.png";
-import ProductImg4 from "../assets/Rectangle 8.png";
+import ProductImg1 from "../assets/image/Rectangle 4.png";
+import ProductImg2 from "../assets/image/Rectangle 6.png";
+import ProductImg3 from "../assets/image/Rectangle 7.png";
+import ProductImg4 from "../assets/image/Rectangle 8.png";
 
 export const products = [
     {

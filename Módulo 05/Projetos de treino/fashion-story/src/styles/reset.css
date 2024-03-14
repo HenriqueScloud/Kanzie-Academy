@@ -46,3 +46,7 @@ a{
     list-style: none;
     text-decoration: none;
 }
+
+img{
+	width: 100%;
+}

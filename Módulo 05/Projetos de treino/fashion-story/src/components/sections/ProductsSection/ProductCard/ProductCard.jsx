@@ -5,8 +5,8 @@ export const ProductCard = ({ image, title, price} ) => {
     return (
         <li>
             <img src={image} alt="Product Image" />
-            <p>{title}</p>
-            <p>R$ {price}</p>
+            <h3 className='title3'>{title}</h3>
+            <p  className='price'>R$ {price}</p>
         </li>
     );
 };

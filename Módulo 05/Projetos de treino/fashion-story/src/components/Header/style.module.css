@@ -3,3 +3,7 @@
     text-align: center;
 
 }
+
+.header img {
+    max-width: 18.75rem;
+}

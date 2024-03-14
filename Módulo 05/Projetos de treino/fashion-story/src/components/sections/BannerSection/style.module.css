@@ -1,13 +1,31 @@
 .bannerSection {
     display: flex;
+    align-items: center;
     gap: 3rem;
 
-    border: 2px solid red;
-    margin: 1rem;
-    padding: 1rem;
 }
 
 .bannerSection>div,
 .bannerSection>img {
     width: 50%;
+}
+
+.bannerSection h1{
+    margin-bottom: 1.125rem;
+}
+
+.bannerSection p{
+    margin-bottom:4rem;
+
+
+}
+
+@media (max-width: 58.25rem){
+    .bannerSection{
+        flex-direction: column;
+    }
+    .bannerSection>div,
+    .bannerSection>img {
+        width: 100%;
+    }
 }

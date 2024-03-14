@@ -7,7 +7,7 @@ export const ProductSection = () =>{
     return (
         <section className={style.productSection}>
             <h2 className='title2'>PRODUTOS EM DESTAQUE</h2>
-            <ul>
+            <ul className={style.productList}>
                 
                 {products.map(({id,image,title,price}) => <ProductCard key={id} image={image} title={title} price={price} /> )}
             </ul>

@@ -4,7 +4,7 @@ import style from './style.module.css'
 export const Header = () =>{
     return (
         <header className={style.header}>
-        <img src={logo} alt="" />
+            <img src={logo} alt="logo" />
         </header>
     )
 }

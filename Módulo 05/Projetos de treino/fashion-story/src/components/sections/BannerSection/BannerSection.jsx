@@ -8,7 +8,7 @@ export const BannnerSection = () => {
         <div>
             <h1 className='title1'>FASHION STORY</h1>
             <p  className='paragraph'>Fique por dentro das nossas últimas promoções e novidades </p>
-            <button>CONFIRA AS OFERTAS</button>
+            <button className='btn'>CONFIRA AS OFERTAS</button>
         </div>
         </section>
     );

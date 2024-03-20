@@ -1,7 +1,7 @@
 .productSection{
 
 
-    padding-block: 6.25rem;
+    padding-block: clamp(2rem, 0.856rem + 6.538vw, 6.25rem);
 }
 
 .productList{
@@ -18,11 +18,21 @@
 }
 
 .productSection h2{
-    padding-bottom: 3.625rem;
+    padding-bottom: clamp(1rem, 0.287rem + 4.077vw, 3.65rem);
 }
 
 .card{
     display: flex;
     flex-direction: column;
     gap: 1rem;
+    border-radius:15px ;
+}
+
+.card:hover{
+    transform: scale(1.05);
+    gap: 1rem;
+}
+.card img:hover{
+    background-size: cover;
+    border-radius:15px ;
 }

@@ -15,7 +15,7 @@
 }
 
 .bannerSection p{
-    margin-bottom:4rem;
+    margin-bottom:clamp(1rem, 0.192rem + 4.615vw, 4rem);
 
 
 }
@@ -28,4 +28,5 @@
     .bannerSection>img {
         width: 100%;
     }
+
 }

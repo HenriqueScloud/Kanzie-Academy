@@ -1,27 +1,28 @@
 .title1{
-    font-size: 6.35rem ;
+    font-size: clamp(3rem, 2.125rem + 5vw, 6.25rem) ;
     font-weight: 500;
 
 }
 .title2{
-    font-size: 3.75rem ;
+    font-size: clamp(2rem, 1.529rem + 2.692vw, 3.75rem) ;
     font-weight: 500;
 
 }
 .title3{
-    font-size: 1.1875rem;
+    font-size: clamp(1rem, 0.95rem + 0.288vw, 1.188rem);
     font-weight: 700;
     font-family: var(--font-secundary);
 }
 
 .price{
-    font-size: 1.125rem;
+    font-size: clamp(1rem, 0.632rem + 0.673vw, 1.188rem);
+
 
 }
 
 
 .paragraph{
     font-family: var(--font-secundary);
-    font-size: 1.125rem;
+    font-size: clamp(1rem, 0.95rem + 0.288vw, 1.188rem);
 }
 

@@ -29,7 +29,7 @@ export const BookEx = () => {
     // criando o novo livro 
     const addBook = (bookData) => {
         const newBook = {
-            id: crypto.randomUUID(),
+            id: crypto.randomUUID(),// grando chaves de id personalizadas apara cada item  da lista
             title: bookData.title,
             author: bookData.author,
         }

@@ -1,0 +1,12 @@
+.btn {
+  padding: 0.75rem 0.875rem;
+  border-radius: 0.5rem;
+  background-color: var(--brand1);
+  color: var(--grey6);
+  font-weight: 600;
+  letter-spacing: 1.2px;
+}
+
+.btn:hover {
+  background-color: var(--brand2);
+}

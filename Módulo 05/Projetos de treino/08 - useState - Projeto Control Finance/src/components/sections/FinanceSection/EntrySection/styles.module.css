@@ -1,0 +1,61 @@
+.entrySection,
+.entryList {
+  display: flex;
+  flex-direction: column;
+}
+
+.entrySection {
+  gap: 2.3125rem;
+}
+
+.entryListSubtotal,
+.entryItem,
+.entryItem > div {
+  display: flex;
+  align-items: center;
+  align-items: center;
+  justify-content: space-between;
+  border-radius: 8px;
+}
+
+.entryListSubtotal {
+  padding: 0.875rem 1rem;
+  border: 1.5px solid var(--grey4);
+  background: var(--grey5);
+}
+
+.entryList {
+  gap: 1.25rem;
+}
+
+.entryItem {
+  padding: 0.5rem 1rem;
+  border: 1.5px solid var(--grey5);
+  background: var(--grey6);
+}
+
+.entryItem > div {
+  gap: 2rem;
+}
+
+.entryItem > div > span,
+.entryItem > div > button {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 0.25rem;
+}
+
+.entryItem > div > span {
+  min-width: 4.5rem;
+  /* padding: 0.4375rem 0.875rem; */
+  padding-inline: 0.875rem;
+  background: var(--grey4);
+  color: var(--grey2);
+  text-transform: capitalize;
+}
+
+.entryItem > div > button {
+  padding: 0.375rem 0.5rem;
+  border: 1.5px solid var(--grey5);
+}

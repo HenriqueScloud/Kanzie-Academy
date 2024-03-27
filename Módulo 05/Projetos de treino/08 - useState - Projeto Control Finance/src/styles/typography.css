@@ -1,0 +1,23 @@
+.title1 {
+  font-weight: 600;
+  font-size: 1.25rem;
+}
+.title2 {
+  font-weight: 500;
+  font-size: 1rem;
+}
+
+.text1 {
+  font-weight: 500;
+  font-size: 0.875rem;
+}
+
+.text2 {
+  font-weight: 400;
+  font-size: 0.875rem;
+}
+
+.text3 {
+  font-weight: 500;
+  font-size: 0.75rem;
+}

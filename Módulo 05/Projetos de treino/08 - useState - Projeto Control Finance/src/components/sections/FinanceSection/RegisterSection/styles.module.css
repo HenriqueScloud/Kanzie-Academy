@@ -1,0 +1,32 @@
+.registerSection,
+.addEntryForm {
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+}
+
+.registerSection > div,
+.addEntryForm > div {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+}
+
+.registerSection > div > p {
+  color: var(--grey2);
+}
+
+.addEntryForm input,
+.addEntryForm select {
+  padding: 0.8rem;
+  border-radius: 0.5rem;
+  outline: 1.5px solid var(--grey3);
+}
+
+.addEntryForm input:focus {
+  outline-color: var(--brand1);
+}
+
+.addEntryForm label {
+  color: var(--grey1);
+}

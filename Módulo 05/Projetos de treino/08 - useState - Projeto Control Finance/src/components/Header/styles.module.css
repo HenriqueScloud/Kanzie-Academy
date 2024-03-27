@@ -1,0 +1,9 @@
+.header {
+  padding-block: 2.5rem;
+  background-color: var(--grey5);
+  text-align: center;
+}
+
+.header h1 span {
+  color: var(--brand1);
+}

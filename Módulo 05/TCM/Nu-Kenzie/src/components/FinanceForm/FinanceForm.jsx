@@ -1,28 +1,19 @@
 import style from './style.module.css';
 import { useState } from 'react';
-
 export const FinanceForm = ({setlistCardTransations, listCardTransations})=>{
-
     const [descricao, setDescricao] = useState('')
     const [Valor, setValor] = useState(0)
     const [type, setType] = useState('Entrada')
-
     const addNewFinanceCard = (event) =>{
         event.preventDefault();
-
         const newFinanceCard = {
             id: crypto.randomUUID(),
             descricao,
             Valor,
             type,
         }
-
         setlistCardTransations([...listCardTransations,newFinanceCard]);
-
     }
-
-
-
     return(
         <form className={style.form} onSubmit={addNewFinanceCard}>
             <label htmlFor="descricao">Descrição</label>
@@ -34,7 +25,6 @@ export const FinanceForm = ({setlistCardTransations, listCardTransations})=>{
                     required
                     onChange={()=>setDescricao(event.target.value)}/>
             <p>Ex: Compra de Roupas </p>
-
             <label htmlFor="valor">Valor (R$)</label>
             <input  type="number" 
                     name="valor" 
@@ -44,7 +34,6 @@ export const FinanceForm = ({setlistCardTransations, listCardTransations})=>{
                     required
                     className='inputs'
                     onChange={()=>setValor(event.target.value)}/>
-
             <label htmlFor="type">Tipo de Valor</label>
             <select name="type" 
                     id="type"   
@@ -54,7 +43,6 @@ export const FinanceForm = ({setlistCardTransations, listCardTransations})=>{
                 <option value="Entrada">Entrada</option>
                 <option value="Despesa">Despesa</option>
             </select>
-
             <button className='buttons' >Inserir Valor</button>
         </form>
     )

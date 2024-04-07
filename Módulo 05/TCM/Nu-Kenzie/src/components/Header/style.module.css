@@ -4,33 +4,17 @@
     border-bottom: 1px solid var(--gray-1);
     box-shadow: 0px 5px 21px .1px rgba(0, 0, 0, 0.032);
     width: 100vw;
-
-
-
-
-
-
 }
-
 .container {
     margin: 0 auto;
-    max-width: 64rem;
-
+    max-width: 66rem;
     display: flex;
-    justify-content: space-between;
-
-    margin: 0 1rem;
-
-
-
-
+    padding: 0 1rem;
 }
-
 .header img {
     width: 7.665rem;
     height: 1.2206rem;
 }
-
 .container button {
     cursor: pointer;
     width: 25px;

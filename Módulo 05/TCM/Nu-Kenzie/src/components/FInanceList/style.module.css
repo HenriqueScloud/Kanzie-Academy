@@ -4,9 +4,22 @@
     margin: 0 auto;
     padding: 0 1rem;
     min-width: 290px ;
-    
 }
 .title{
     font: var(--title-3) ;
     margin-bottom: 25px;
+}
+.zeroLançamentos{
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.zeroLançamentosH2 {
+    text-align: center;
+    font-size: 1.375rem;
+    font-family: var(--font-family);
+    color: var(--gray-3);
+    font-weight: 700;
 }

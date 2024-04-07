@@ -6,7 +6,6 @@
     padding: 0 1rem;
     background-color: var(--gray-1);
 }
-
 .inputs:focus{
     border: .125rem solid var(--gray-4)
 }

@@ -9,7 +9,17 @@
     display: flex;
     justify-content: space-between;
 }
-
+.container_card_despesa {
+    border-radius: .25rem;
+    height: 5.4375rem;
+    border-left: 4px solid var(--gray-2);
+    background-color: var(--gray-1);
+    margin-bottom: 1rem;
+    padding: 1rem;
+    color: var(--gray-4);
+    display: flex;
+    justify-content: space-between;
+}
 .despesa-card .container_card {
     border-left:4px solid var(--gray-2);
     border-radius: .25rem;
@@ -21,7 +31,6 @@
     display: flex;
     justify-content: space-between;
 }
-
 .title{
     display: flex;
     flex-direction: column;
@@ -30,7 +39,6 @@
 .descricao{
     font: var(--title-3)
 }
-
 .value{
     display: flex;
     flex-direction: column;

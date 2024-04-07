@@ -1,61 +1,44 @@
 @import url('https://fonts.googleapis.com/css2?family=Nunito+Sans:ital,opsz,wght@0,6..12,200..1000;1,6..12,200.. 1000&display=swap');
-
-
 :root {
     --color-primary: #fd377e;
     --color-primary-2: #E34981;
     --color-secundary: #03B898;
-
     /* gray scalar */
-
     --gray-4: #212529;
     --gray-3: #868E96;
     --gray-2: #E9ECEF;
     --gray-1: #F8F9FA;
-
     --font-family: "Nunito Sans", sans-serif;
-
     --title-1: bold 38px "Nunito Sans", sans-serif;
     --title-2: bold 22px "Nunito Sans", sans-serif;
     --title-3: bold 16px "Nunito Sans", sans-serif;
     --title-4: bold 12px "Nunito Sans", sans-serif;
     --headline: regular 16pX, "Nunito Sans", sans-serif;
-
     --radius: .5rem;
 }
 .darkMode{
     background-color: tomato;
 }
-
 body {
     font-family: var(--font-family);
     font-size: .75rem;
-
 }
-
 main {
-
     max-width: 64rem;
     margin: 0 auto;
-    padding: 0 2rem;
-    
+    padding: 0  2rem 5rem 2rem;
     gap: 5rem;
-
     color: var(--gray-4);
     display: flex;
     justify-content: space-between;
-
 }
-
 main > div{
     display: flex;
     flex-direction: column;
     align-items: center;
     gap: 1rem;
     min-width: 290px;
-
 }
-
 @media (max-width: 875px){
     main {
         display: flex;

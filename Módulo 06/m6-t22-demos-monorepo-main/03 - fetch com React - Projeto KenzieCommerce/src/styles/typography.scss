@@ -1,0 +1,48 @@
+.title {
+  font-weight: 700;
+  font-family: var(--font-family-primary);
+
+  // NESTING
+  &.one {
+    font-size: 3rem;
+    font-family: var(--font-family-secondary);
+  }
+
+  &.two {
+    font-size: 1.75rem;
+  }
+
+  &.three {
+    font-size: 1.125rem;
+  }
+}
+
+.text {
+  font-weight: 400;
+  font-size: 1rem;
+  font-family: var(--font-family-primary);
+
+  strong {
+    font-weight: 600;
+  }
+
+  &.sm {
+    font-size: 0.75rem;
+  }
+
+  &.md {
+    font-size: 1.1125rem;
+  }
+
+  &.lg {
+    font-size: 1.5rem;
+  }
+
+  &.green {
+    color: var(--color-green-100);
+  }
+
+  &.red {
+    color: var(--color-red-100);
+  }
+}

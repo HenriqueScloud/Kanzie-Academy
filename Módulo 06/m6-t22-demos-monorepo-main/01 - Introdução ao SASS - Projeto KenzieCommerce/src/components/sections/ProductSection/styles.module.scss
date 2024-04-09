@@ -1,0 +1,18 @@
+.productSection {
+  padding-block: 0.5rem;
+}
+
+.productList {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+  gap: 1rem;
+}
+
+.productInfo h3 {
+  -webkit-box-orient: vertical;
+  display: -webkit-box;
+  -webkit-line-clamp: 3;
+
+  margin-block: 0.5rem;
+  overflow: hidden;
+}

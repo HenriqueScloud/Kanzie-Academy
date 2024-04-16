@@ -10,9 +10,13 @@
     "preview": "vite preview"
   },
   "dependencies": {
+    "components": "^0.1.0",
     "react": "^18.2.0",
     "react-dom": "^18.2.0",
-    "sass": "^1.74.1"
+    "sass": "^1.75.0",
+    "scss": "^0.2.4",
+    "styled": "^1.0.0",
+    "styled-components": "^6.1.8"
   },
   "devDependencies": {
     "@types/react": "^18.2.66",

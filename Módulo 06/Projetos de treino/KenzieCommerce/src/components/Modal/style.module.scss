@@ -42,17 +42,12 @@
     }
   }
 
-  div > button {
-    width: 15.9375rem;
-    padding: 0.25rem 3rem;
-  }
-
   div {
     display: flex;
     flex-direction: row;
     justify-content: space-between;
     align-items: center;
-    padding: 1.2rem;
+    padding:.42rem;
   }
 }
 
@@ -73,8 +68,7 @@
   align-items: center;
   flex-direction: column;
 
-  li:first-child {
-  }
+  
 
   > li {
     display: flex;
@@ -84,10 +78,10 @@
     gap: 1rem;
 
     span {
-      padding: 1rem;
-      cursor: pointer;
+        padding: 1rem;
+        cursor: pointer;
+        }
     }
-  }
   :hover {
     background-color: var(--gray-600);
   }
@@ -109,7 +103,30 @@
     li+li{
         margin-top:2rem;
     }
+
+    
 }
+.bagCardDetaiuls{
+        display: flex;
+        flex-direction: column;
+        padding: 1rem;
+        
+
+        h1{
+            -webkit-box-orient: vertical;
+            display: -webkit-box;
+            -webkit-line-clamp: 1;
+            overflow: hidden;
+        }
+        
+
+
+        .btnQuantaty{
+            align-self: flex-start;
+        }
+    }
+
+
 
 
   figure {

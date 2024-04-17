@@ -2,21 +2,12 @@ import style from "./style.module.scss";
 import { ModalList } from "./ModalList/ModalList";
 
 
-export const Modal = ({
-    setIsModalOpen,
-    bagItems,
-    removeBagItems,
-    }) => {
-    
-
+export const Modal = ({ setIsModalOpen, bagItems, removeBagItems, addToBag, }) => {
     const subTotal = () => {
-        const valueTot = bagItems.reduce((acc, item) => acc + item.price, 0);
+        const valueTot = bagItems.reduce((acc, item) => acc + (item.price * item.quantaty), 0);
         return valueTot;
-    }
+    };
     // faça o total dentro do modal sempre que for efetuar um carrinho. esse metodo funciona melhor que deixa o tatal dentro de uma variavel de estado global.
-
-
-
 
     return (
         <div className={style.modalBackdrop}>
@@ -27,12 +18,20 @@ export const Modal = ({
                 <h1>X</h1>
             </button>
             </header>
-            <ModalList removeBagItems={removeBagItems} bagItems={bagItems} />
+
+            <ModalList
+            removeBagItems={removeBagItems}
+            bagItems={bagItems}
+            addToBag={addToBag}
+            />
+
             <div>
-            <span className="title three">{subTotal().toLocaleString("pt-BR",{
-                style:'currency',
-                currency:'BRL',
-            })}</span>
+            <span className="title three">
+                {subTotal().toLocaleString("pt-BR", {
+                style: "currency",
+                currency: "BRL",
+                })}
+            </span>
             <button className="btn">Finalizar compra</button>
             </div>
         </div>

@@ -1,6 +1,7 @@
 import style from "../style.module.scss";
 import { FaTrash } from "react-icons/fa";
 import { FaAngleRight, FaAngleLeft } from "react-icons/fa6";
+ // que merda de materia é essa vei. estou  uit perdido dentro disse negocio de useEffect e localStorage 
 
 export const ModalList = ({ removeBagItems, bagItems, addToBag }) => {
     return (

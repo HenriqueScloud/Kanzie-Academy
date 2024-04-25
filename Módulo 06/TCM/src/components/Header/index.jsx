@@ -12,7 +12,7 @@ export const Header = () => {
             <img src={Logo} alt="Logo Kenzie Burguer" />
             <button>
             <MdShoppingCart size={21} />
-            <span>1</span>
+            <span>9</span>
             </button>
         </div>
         </header>

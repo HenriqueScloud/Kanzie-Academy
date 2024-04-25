@@ -5,9 +5,19 @@ export const CartItemCard = ({ product }) => {
     return (
         <li className={style.CartItemCard}>
             <div>
-                <img src={product.img} alt={product.name}/>
-                <h3>{product.name}</h3>
+                <img 
+                    src={product.img} 
+                    alt={product.nome} />
             </div>
+            <main>
+                <h3 className="font_title_3">{product.nome}</h3>
+                <span className="font_body">
+                    {product.preço.toLocaleString("pt-BR", {
+                    style: "currency",
+                    currency: "BRL",
+                    })}
+                </span>
+            </main>
             <button aria-label="delete" title="Remover item">
                 <MdDelete size={21} />
             </button>

@@ -1,0 +1,29 @@
+.productCard {
+  border: 2px solid var(--gray-0);
+  border-radius: 5px;
+  width: 300px;
+  height: 350px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  &:hover {
+    border: 2px solid var(--color-primary);
+  }
+}
+.productCard_header {
+  background-color: var(--gray-0);
+  // margin: 1rem;
+  width: 300px;
+  height: 150px;
+  img {
+    // object-fit: fill;
+    background-color: transparent;
+  }
+}
+.productCard_main {
+  margin: 1rem;
+
+  display: flex;
+  flex-direction: column;
+  gap: 1.25rem;
+}

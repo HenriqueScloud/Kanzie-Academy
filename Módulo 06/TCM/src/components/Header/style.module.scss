@@ -1,3 +1,35 @@
 .header{
-    border: 1px solid red;
-}
+    background-color: var(--gray-0);
+    padding: 1rem;
+    div{
+        margin: 0 auto;
+        max-width: 1024px;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        padding: 1rem;
+    }
+    img{
+        width: 150px;
+        height: 22.85px;
+    }
+    button{
+        width: 36px;
+        height: 39px;
+        border: none;
+        background-color: transparent;
+        color: var(--gray-300);
+    }
+    span{
+        position: fixed;
+        top: 5px;
+        width: 20px;
+        height: 24px;
+        border-radius: 7px;
+        color: var(--gray-0);
+        background-color: var(--color-primary);
+        font-size: 14px;
+        font-weight: 900;
+        font-size: 1.5rem;
+    }
+}       

@@ -1,3 +1,27 @@
 .CartItemCard{
-    border: 1px solid #EB5757;
+    padding: 1rem;
+    margin: 1rem;
+
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    div{
+        width:80px ;
+        height: 80px;
+        background-color: var(--gray-0);
+        border-radius: 5px;
+    }
+    main{
+        width: 250px;
+        height: 80px;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-around;
+    }
+    button{
+        border: none;
+        background-color: transparent;
+        color: var(--gray-300);
+    }
 }

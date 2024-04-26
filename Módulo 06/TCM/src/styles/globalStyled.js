@@ -5,6 +5,7 @@ export const GlobalStyle = createGlobalStyle`
     // body
     body{
         font: var(--font-body);
+        
     }
 
     html, body, div, span, applet, object, iframe,

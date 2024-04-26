@@ -1,22 +1,19 @@
-.productlist{
-    margin: 1rem auto;
-    max-width: 1024px;
-    
-    display: grid;
-    gap: 52px 56px ;
-    grid-template-columns: repeat(4,1fr);
-}
+
 
 .productlist {
-  display: grid;
-  grid-template-columns: repeat(4, 1fr);
-  gap: 52px 56px;
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 52px 56px;
+    margin: 0 auto;
+    max-width: 1024px;
+    padding: 1rem;
 }
 
 @media (max-width: 1300px) {
   .productlist {
     grid-template-columns: repeat(3, 1fr);
-    margin: 1rem ;
+    margin: 1rem auto;
+
 
   }
 }
@@ -24,14 +21,14 @@
 @media (max-width: 880px) {
   .productlist {
     grid-template-columns: repeat(2, 1fr);
-    margin: 1rem ;
+    margin: 1rem auto;
 
   }
 }
 
 @media (max-width: 600px) {
   .productlist {
-    margin: 1rem ;
+    margin: 1rem auto;
     display: flex;
 
     gap: 20px;

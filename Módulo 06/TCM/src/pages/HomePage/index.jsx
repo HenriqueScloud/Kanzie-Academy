@@ -28,7 +28,7 @@ export const HomePage = () => {
             <Header />
             <main className="font_body">
                 <ProductList productList={productList} />
-                <CartModal cartList={cartList} />
+                {/* <CartModal cartList={cartList} /> */}
             </main>
         </>
     );

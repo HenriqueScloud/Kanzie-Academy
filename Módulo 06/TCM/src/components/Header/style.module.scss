@@ -14,22 +14,24 @@
         height: 22.85px;
     }
     button{
+        border: none;
         width: 36px;
         height: 39px;
-        border: none;
         background-color: transparent;
         color: var(--gray-300);
     }
     span{
-        position: fixed;
-        top: 5px;
-        width: 20px;
-        height: 24px;
+        position: relative;
+        top: -40px;
+        right: -18px;
+        width: 25px;
+        height: 20px;
         border-radius: 7px;
         color: var(--gray-0);
         background-color: var(--color-primary);
         font-size: 14px;
-        font-weight: 900;
-        font-size: 1.5rem;
+        font-weight: 600;
+        font-size: 1.25rem;
+        padding: 5px;
     }
 }       

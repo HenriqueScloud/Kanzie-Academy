@@ -1,0 +1,27 @@
+.btn_md{
+    max-width: 130px;
+    height: 60px;
+    background-color: #BDBDBD;
+    border-radius: 8px;
+    padding:0 20px;
+    border: none;
+    color: #FFFFFF;
+    font-weight: bold;
+}
+.btn_sm{
+    max-width: 130px;
+    height: 40px;
+    background-color: #BDBDBD;
+    border-radius: 8px;
+    border: none;
+    padding:0 20px;
+    color: #FFFFFF;
+    font-weight: bold;
+}
+
+.btn_md,.btn_sm{
+    &:hover{
+        cursor: pointer;
+        background-color: var(--color-primary)
+    }
+}

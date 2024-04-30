@@ -4,10 +4,6 @@ import { MdShoppingCart } from "react-icons/md";
 import Style from "../Header/style.module.scss";
 
 export const Header = ({ setOnModal, cartList }) => {
-  const [valueTotal, setValueTotal] = useState("");
-
-
-
   return (
     <header className={Style.header}>
       <div>

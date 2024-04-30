@@ -1,6 +1,6 @@
 .CartItemCard{
     padding: 1rem;
-    margin: 1rem;
+    
 
     display: flex;
     justify-content: space-between;
@@ -13,11 +13,13 @@
         border-radius: 5px;
     }
     main{
-        width: 250px;
+        width: 15rem;
         height: 80px;
         display: flex;
         flex-direction: column;
         justify-content: space-around;
+        margin: 0 1rem;
+        
     }
     button{
         border: none;

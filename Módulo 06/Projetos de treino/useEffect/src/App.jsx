@@ -13,7 +13,7 @@ function App() {
 
             const {data} = await api.get(url);
 
-
+            console.log(data);,mnvamnvafnvafsdvlbsadfv
             setUser(data);
         }
         fetchData()

@@ -23,24 +23,18 @@ export const HomePage = () => {
 
 
 
-    // adição, exclusão, e exclusão geral do carrinho
 
-    const addItemCardList = (Item)=>{
-        // const itemExist = cartList.includes((item)=> item.id === Item.id);
-        return setCartList([...cartList, {...Item}]);
+    const addItemCardList = (item)=>{
+        const foundItem = cartList.find((i) => i.id === item.id);
+        !foundItem && setCartList([...cartList, { ...item }]);
     }
+
+
+
     const delItemCardList = (item) =>{
         const itemDelet = cartList.find((i)=>i.id === item.id);
         itemDelet && setCartList(cartList.filter((i)=>i.id !== item.id))
     }
-
-
-
-
-
-    // renderizações condições e o estado para exibir ou não o carrinho (concluido)
-
-
 
     // filtro de busca
 
@@ -51,21 +45,22 @@ export const HomePage = () => {
     // estilizar tudo com sass de forma responsiva
 
     return (
-      <>
-        <Header setOnModal={setOnModal} cartList={cartList} />
-        <main className="font_body">
-          <ProductList
-            productList={productList}
-            addItemCardList={addItemCardList}
-          />
-          {OnModal && (
-            <CartModal
-              cartList={cartList}
-              setOnModal={setOnModal}
-              delItemCardList={delItemCardList}
+        <>
+            <Header setOnModal={setOnModal} cartList={cartList} />
+            <main className="font_body">
+            <ProductList
+                productList={productList}
+                addItemCardList={addItemCardList}
             />
-          )}
-        </main>
-      </>
+            {OnModal && (
+                <CartModal
+                cartList={cartList}
+                setCartList={setCartList}
+                setOnModal={setOnModal}
+                delItemCardList={delItemCardList}
+                />
+            )}
+            </main>
+        </>
     );
 };

@@ -7,13 +7,13 @@ export const CartItemCard = ({ product, delItemCardList }) => {
       <div>
         <img 
         src={product.img} 
-        alt={product.nome} 
+        alt={product.name} 
         />
       </div>
       <main>
-        <h3 className="font_title_3">{product.nome}</h3>
+        <h3 className="font_title_3">{product.name}</h3>
         <span className="font_body">
-          {product.preço.toLocaleString("pt-BR", {
+          {product.price.toLocaleString("pt-BR", {
             style: "currency",
             currency: "BRL",
           })}

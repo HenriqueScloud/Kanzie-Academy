@@ -9,39 +9,22 @@ export const HomePage = () => {
     const [cartList, setCartList] = useState([]);
     const [OnModal, setOnModal] = useState(false)
 
-
-
     // useEffect montagem - carrega os produtos da API e joga em productList
 
     useEffect(()=>{
-
         const getProducts = async () => {
-            const { data } = await api.get("/products");
-            setProductList(data)
-            console.log(data);
-
+            const {data} = await api.get("/products");
+            setProductList([...data])
         }
-
-        
-
-        // setProductList([...productList, ])
+        getProducts();
     },[])
 
-
     // useEffect atualização - salva os produtos no localStorage (carregar no estado)
-
-
-
-
-
 
     const addItemCardList = (item)=>{
         const foundItem = cartList.find((i) => i.id === item.id);
         !foundItem && setCartList([...cartList, { ...item }]);
     }
-
-
-
     const delItemCardList = (item) =>{
         const itemDelet = cartList.find((i)=>i.id === item.id);
         itemDelet && setCartList(cartList.filter((i)=>i.id !== item.id))
@@ -49,11 +32,6 @@ export const HomePage = () => {
 
     // filtro de busca
 
-
-
-
-
-    // estilizar tudo com sass de forma responsiva
 
     return (
         <>

@@ -1,9 +1,7 @@
 
 body{
-    font: var(--font-body);
-    
+    font: var(--font-body);   
 }
-
 html, body, div, span, applet, object, iframe,
 h1, h2, h3, h4, h5, h6, p, blockquote, pre,
 a, abbr, acronym, address, big, cite, code,
@@ -49,15 +47,10 @@ table {
 button{
     cursor: pointer;
 }
-
-
-
 :root {
     --color-primary: #27AE60;
     --color-secondary: #EB5757;
-
     //gray scale palete
-    
     --gray-600:#333333;
     --gray-300:#828282;
     --gray-100:#E0E0E0;

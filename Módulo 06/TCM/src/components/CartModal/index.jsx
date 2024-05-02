@@ -1,13 +1,10 @@
 import { MdClose } from "react-icons/md";
 import { CartItemCard } from "./CartItemCard";
 import style from "./style.module.scss";
-
-
 export const CartModal = ({ cartList, setCartList, setOnModal, delItemCardList }) => {
     const total = cartList.reduce((prevValue, product) => {
         return prevValue + product.price;
     }, 0);
-
     return (
         <div className={style.cardModal_Container}>
         <section role="dialog" className={style.cardModal}>

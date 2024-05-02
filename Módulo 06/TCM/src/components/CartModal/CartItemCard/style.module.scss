@@ -1,11 +1,8 @@
 .CartItemCard{
     padding: 1rem;
-    
-
     display: flex;
     justify-content: space-between;
     align-items: center;
-
     div{
         width:80px ;
         height: 80px;
@@ -19,7 +16,6 @@
         flex-direction: column;
         justify-content: space-around;
         margin: 0 1rem;
-        
     }
     button{
         border: none;

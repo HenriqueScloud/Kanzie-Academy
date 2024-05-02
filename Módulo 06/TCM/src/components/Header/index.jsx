@@ -2,7 +2,6 @@ import { useState } from "react";
 import Logo from "../../assets/Logo.svg";
 import { MdShoppingCart } from "react-icons/md";
 import Style from "../Header/style.module.scss";
-
 export const Header = ({ setOnModal, cartList }) => {
   return (
     <header className={Style.header}>

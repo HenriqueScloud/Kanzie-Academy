@@ -2,22 +2,23 @@ import { Routes, Route } from 'react-router-dom'
 import { HomePage } from '../pages/HomePage';
 import { AboutPage } from '../pages/AboutPage';
 import { ContactPage } from '../pages/ContactPage';
-import { RegisterPage } from '../pages/RegisterPage';
+import { useForm } from 'react-hook-form';
 
 export const RoutesMain = () =>{
-
-    
+  const { register, handleSubmit } = useForm();
+  // console.log(register);
 
     return (
       <>
         <Routes>
-          <Route path="/HomePage" element={<HomePage/>}  />
+          <Route path="/" element={<HomePage register={register} />} />
           <Route path="/AboutPage" element={<AboutPage />} />
-          <Route path="/ContactPage" element={<ContactPage />} />
           <Route
-            path="/"
-            element={<RegisterPage />}
-            
+            path="/ContactPage"
+            element={
+              <ContactPage  handleSubmit={handleSubmit} 
+                            register={register} />
+            }
           />
         </Routes>
       </>

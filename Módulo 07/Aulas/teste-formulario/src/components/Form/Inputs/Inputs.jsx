@@ -6,7 +6,6 @@ export const Inputs = ({title, id, placeholder, type, setvalue, value}) => {
               id={id}
               placeholder={placeholder}
               value={value}
-              onChange={(e)=>setvalue(e.target.value)}
               required
               />
     </>

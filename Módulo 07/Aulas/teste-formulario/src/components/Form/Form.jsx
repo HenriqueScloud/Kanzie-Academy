@@ -1,31 +1,32 @@
 import { Inputs } from "./Inputs/Inputs";
-import { useState } from "react";
+import { useForm } from "react-hook-form";
 import { useNavigate } from "react-router-dom";
-export const Form = ({ setUser }) => {
-  const [name, setName] = useState("");
-  const [email, setEmail] = useState("");
-  const [password, setpassword] = useState("");
+
+
+export const Form = () => {
+  const {register, handleSubmit}= useForm()
+
+  // const [name, setName] = useState("");
+  // const [email, setEmail] = useState("");
+  // const [password, setpassword] = useState("");
 
   const navigate = useNavigate();
 
-  const submit = (e) => {
-    e.preventDefault();
-    // console.log();
+  const submit = (formData) => {
     navigate("/");
-    setUser({name, email, password})
+    console.log(formData);
   };
 
   return (
     <>
-      <form>
+      <form onSubmit={handleSubmit(submit)}>
         <h1>formulario de registro </h1>
         <Inputs
           type="text"
           title="name"
           placeholder="Seu nome"
           id="name"
-          value={name}
-          setvalue={setName}
+          {...register("name")}
         />
         <br />
         <Inputs
@@ -33,8 +34,7 @@ export const Form = ({ setUser }) => {
           title="email"
           placeholder="Seu email"
           id="email"
-          value={email}
-          setvalue={setEmail}
+          {...register("email")}
         />
         <br />
         <Inputs
@@ -42,8 +42,7 @@ export const Form = ({ setUser }) => {
           title="Senha"
           placeholder="Crie sua senha"
           id="senha"
-          value={password}
-          setvalue={setpassword}
+          {...register("password")}
         />
         <br />
         <input type="submit" onClick={submit} />

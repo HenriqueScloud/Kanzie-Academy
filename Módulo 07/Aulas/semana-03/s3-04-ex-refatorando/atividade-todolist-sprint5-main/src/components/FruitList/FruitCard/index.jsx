@@ -1,4 +1,8 @@
-export const FruitCard = ({fruit, removeFruit}) => {
+import { useCallback, useContext } from "react"
+import { FruitContext } from "../../../providers/FruitContext"
+
+export const FruitCard = ({fruit}) => {
+  const { removeFruit}=useContext(FruitContext)
     return(
         <li>
             <h3>{fruit.name}</h3>

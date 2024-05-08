@@ -1,5 +1,5 @@
 {
-  "name": "s3-02-contextapi",
+  "name": "atividade-todolist-sprint5",
   "private": true,
   "version": "0.0.0",
   "type": "module",
@@ -19,16 +19,16 @@
     "react-router-dom": "^6.23.0",
     "sass": "^1.77.0",
     "styled-components": "^6.1.10",
-    "zod": "^3.23.7"
+    "zod": "^3.23.8"
   },
   "devDependencies": {
-    "@types/react": "^18.2.66",
-    "@types/react-dom": "^18.2.22",
-    "@vitejs/plugin-react": "^4.2.1",
-    "eslint": "^8.57.0",
-    "eslint-plugin-react": "^7.34.1",
+    "@types/react": "^18.2.15",
+    "@types/react-dom": "^18.2.7",
+    "@vitejs/plugin-react": "^4.0.3",
+    "eslint": "^8.45.0",
+    "eslint-plugin-react": "^7.32.2",
     "eslint-plugin-react-hooks": "^4.6.0",
-    "eslint-plugin-react-refresh": "^0.4.6",
-    "vite": "^5.2.0"
+    "eslint-plugin-react-refresh": "^0.4.3",
+    "vite": "^4.4.5"
   }
 }

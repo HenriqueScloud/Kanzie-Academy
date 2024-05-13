@@ -7,7 +7,8 @@ export const TodoProvider = ({children}) =>{
 
   // exportações globais 
   // eslint-disable-next-line react-hooks/rules-of-hooks
-  const [count, setCount] = useState(0)
+  const [count, setCount] = useState(0) 
+  // crinado as variaveis de acesso para outros componentes 
 
   return (
     <TodoContext.Provider value={{count, setCount}}>

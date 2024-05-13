@@ -3,7 +3,8 @@ import { TodoContext } from "../providers/todoContaxt"
 
 export const  HomePage = () =>{
 
-  const { count, setCount } = useContext(TodoContext)
+  const { count, setCount } = useContext(TodoContext) 
+  // importação dos componentes do todocontext 
 
 
     return (

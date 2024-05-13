@@ -1,0 +1,27 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@100..900&display=swap');
+
+body {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  font: var(--font-family)
+}
+
+/*style exemp*/
+
+:root {
+  --color-primary: #FF577F;
+  --color-primary-focus: #FF427F;
+  --color-primary-negative: #59323F;
+  --gray-4: #121214;
+  --gray-3: #212529;
+  --gray-2: #343B41;
+  --gray-1: #868E96;
+  --gray-0: #F8F9FA;
+  --font-family: normal small-caps normal 12px/1.5 "Inter", sans-serif;
+  --title-1: normal small-caps bold 18px/1.5 "Inter", sans-serif;
+  --title-2: normal small-caps bold 16px/1.5 "Inter", sans-serif;
+  --headlineBold: normal small-caps bold 12px/1.5 "Inter", sans-serif; 
+  --paragraph: normal small-caps normal 16px/1.5 "Inter", sans-serif; 
+} 

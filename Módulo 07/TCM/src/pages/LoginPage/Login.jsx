@@ -4,7 +4,7 @@ import style from "./index.module.scss";
 export const Login = () => {
   const Navigate = useNavigate();
   return (
-    <main className={style.main}>
+    <>
       <header className={style.header}>
         <div className="container">
           <figure>
@@ -20,7 +20,6 @@ export const Login = () => {
           <Input label="Senha" placeholder="Digite sua Senha" type="Password" />
           <br />
           <button className="btn_primary">Entrar</button>
-        
           <aside className={style.aside}>
             <p>Ainda não possui uma conta?</p>
             <button
@@ -32,6 +31,6 @@ export const Login = () => {
           </aside>
         </form>
       </div>
-    </main>
+    </>
   );
 };

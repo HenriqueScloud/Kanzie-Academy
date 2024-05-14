@@ -7,7 +7,7 @@ export const Login = () => {
     <>
       <header className={style.header}>
         <figure>
-          <img src="#" alt="Kenzie Hub" />
+          <img src="../src/assets/Logo.png" alt="midia" />
         </figure>
       </header>
       <form className={style.form}>

@@ -1,5 +1,5 @@
 import { Input } from "../../components/Inputs/index";
-import {useNavigate} from "react-router-dom"
+import { useNavigate } from "react-router-dom";
 import style from "./index.module.scss";
 
 export const Register = () => {
@@ -8,7 +8,7 @@ export const Register = () => {
     <>
       <header className={style.header}>
         <figure>
-          <img src="#" alt="kenzie hub" />
+          <img src="../src/assets/Logo.png" alt="midia" />
         </figure>
         <button onClick={() => Navigate("/")}>Voltar</button>
       </header>
@@ -75,7 +75,7 @@ export const Register = () => {
 
           <label htmlFor="modulo">Selecionar Módulo</label>
           <br />
-          <select name="modulo" className={style.select} >
+          <select name="modulo" className={style.select}>
             <option value="Módulo 1">Módulo 1</option>
             <option value="Módulo 2">Módulo 2</option>
             <option value="Módulo 3">Módulo 3</option>

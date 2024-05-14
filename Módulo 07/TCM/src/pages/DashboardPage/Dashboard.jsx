@@ -1,11 +1,12 @@
 import style from "./index.module.scss";
+
 export const Dashboard = () => {
   return (
     <>
       <header className={style.header}>
         <div className="container">
           <figure>
-            <img src="#" alt="kenzie Hub" />
+            <img src="../src/assets/Logo.png" alt="midia" />
           </figure>
           <button>sair</button>
         </div>

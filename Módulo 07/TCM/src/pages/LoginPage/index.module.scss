@@ -3,7 +3,8 @@
   margin-bottom: 3rem;
 }
 .form {
-  max-width: 369px;
+    // border: 1px solid red;
+
   background-color: var(--gray-3);
   border-radius: 4px;
   padding: 42px 22px;
@@ -12,13 +13,13 @@
     padding-block: 1rem;
     font: var(--title-1);
   }
-  input {
-    max-width: 90%;
-    margin-block: 10px 22.33px;
-  }
   button {
     font: var(--title-2);
   }
+  // input{
+  //   // width: 95%;
+  //   border: 1px solid red;
+  // }
 }
 .aside {
   padding-top: 12px;

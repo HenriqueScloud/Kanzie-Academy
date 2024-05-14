@@ -7,14 +7,16 @@ export const Register = () => {
   return (
     <>
       <header className={style.header}>
-        <h1>register</h1>
+        <figure>
+          <img src="#" alt="kenzie hub" />
+        </figure>
         <button onClick={() => Navigate("/")}>Voltar</button>
       </header>
-      <main className={style.header}>
+      <main className={style.main}>
         <h1>Crie sua conta</h1>
         <p>Rápido e grátis, vamos nessa !</p>
 
-        <form>
+        <form className={style.form}>
           <Input
             label="Nome"
             placeholder="Digite aqui seu nome"
@@ -73,7 +75,7 @@ export const Register = () => {
 
           <label htmlFor="modulo">Selecionar Módulo</label>
           <br />
-          <select name="modulo" className="input">
+          <select name="modulo" className={style.select} >
             <option value="Módulo 1">Módulo 1</option>
             <option value="Módulo 2">Módulo 2</option>
             <option value="Módulo 3">Módulo 3</option>

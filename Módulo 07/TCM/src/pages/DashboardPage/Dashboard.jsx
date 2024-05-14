@@ -11,11 +11,11 @@ export const Dashboard = () => {
           <button>sair</button>
         </div>
       </header>
-      <main className={style.header}>
+      <main className={style.main}>
         <section>
           <div className="container">
-            <h1>olá, henrique</h1>
-            <p>primeiro modulo</p>
+            <h1>Olá, Henrique Silva Mendes ! </h1>
+            <p>primeiro modulo ( Introdução ao Front-End )</p>
           </div>
         </section>
         <section>

@@ -1,6 +1,8 @@
 import style from "./index.module.scss";
-
+import {useNavigate} from "react-router-dom"
 export const Dashboard = () => {
+
+  const navigate = useNavigate();
   return (
     <>
       <header className={style.header}>
@@ -8,7 +10,7 @@ export const Dashboard = () => {
           <figure>
             <img src="../src/assets/Logo.png" alt="midia" />
           </figure>
-          <button>sair</button>
+          <button onClick={()=>navigate('/')}>sair</button>
         </div>
       </header>
       <main className={style.main}>

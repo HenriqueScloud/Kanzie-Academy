@@ -23,7 +23,9 @@ export const Login = () => {
         <br />
         <Input label="Senha" placeholder="Digite sua Senha" type="password" />
         <br />
-        <button className="btn_primary">Entrar</button>
+        <button className="btn_primary" onClick={() => Navigate("/dashboard")}>
+          Entrar
+        </button>
         <aside className={style.aside}>
           <p>Ainda não possui uma conta?</p>
           <button

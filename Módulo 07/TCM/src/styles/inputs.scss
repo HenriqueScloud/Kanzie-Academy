@@ -11,3 +11,21 @@
     color: var(--gray-0);
   }
 }
+form div {
+  position: relative;
+  figure {
+    position: absolute;
+    left: 22.5rem;
+    top: 2.9rem;
+    background-color: transparent;
+    border: none;
+    color: var(--gray-0);
+    cursor: pointer;
+    width: 25px;
+    height: 25px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 50%;
+  }
+}

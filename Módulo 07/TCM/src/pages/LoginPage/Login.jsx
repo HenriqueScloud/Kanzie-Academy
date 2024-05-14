@@ -3,6 +3,7 @@ import { useNavigate } from "react-router-dom";
 import style from "./index.module.scss";
 export const Login = () => {
   const Navigate = useNavigate();
+
   return (
     <>
       <header className={style.header}>
@@ -12,9 +13,15 @@ export const Login = () => {
       </header>
       <form className={style.form}>
         <h1>Login</h1>
-        <Input label="Emal" placeholder="Digite seu Email" type="email" />
+        <Input
+          label="Email"
+          placeholder="Digite aqui seu email"
+          type="text"
+          id="email"
+          name="email"
+        />
         <br />
-        <Input label="Senha" placeholder="Digite sua Senha" type="Password" />
+        <Input label="Senha" placeholder="Digite sua Senha" type="password" />
         <br />
         <button className="btn_primary">Entrar</button>
         <aside className={style.aside}>

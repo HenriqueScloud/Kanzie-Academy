@@ -5,10 +5,10 @@ export const TodoContext = createContext({})
 // eslint-disable-next-line react/prop-types
 export const TodoProvider = ({children})=>{
   //criando os elementos globais 
-  const [todo, setTodo] = useState([])
+  const [todo,settodo]= useState([])
 
   return (
-    <TodoContext.Provider value={(todo, setTodo)}>
+    <TodoContext.Provider value={(todo,settodo)}>
       {children}
     </TodoContext.Provider>
   );

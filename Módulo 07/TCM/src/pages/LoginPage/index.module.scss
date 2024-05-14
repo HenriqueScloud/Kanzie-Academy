@@ -1,0 +1,41 @@
+.main {
+  // border: 1px solid rgb(0, 255, 247);
+  // padding: 1rem; //tirar
+  max-width:369px ;
+
+}
+.header {
+  text-align: center;
+  margin-bottom: 1rem;
+  border: 1px solid rgb(48, 115, 177);
+}
+
+.form {
+  max-width:369px ;
+  background-color: var(--gray-3);
+  border-radius: 4px;
+  padding: 42px 22px;
+  h1 {
+    text-align: center;
+    padding-block: 1rem;
+    font: var(--title-1);
+  }
+
+  input {
+    max-width:90% ;
+    margin-block: 10px 22.33px;
+  }
+  button{
+    font: var(--title-2)
+  }
+}
+
+.aside {
+  padding-top: 12px;
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  gap: 0.625rem;
+
+  
+}

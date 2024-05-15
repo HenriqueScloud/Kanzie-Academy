@@ -1,7 +1,7 @@
-import { useState } from "react";
+import { forwardRef, useState } from "react";
 import { RiEyeFill, RiEyeOffFill } from "react-icons/ri";
-// eslint-disable-next-line react/prop-types
-export const Input = ({ label, type, ...rest }) => {
+// eslint-disable-next-line react/prop-types, react/display-name
+export const Input = forwardRef(({ label, type, ...rest },ref ) => {
   const [showPassword, setShowPassword] = useState(false);
   const onShowPassword = (event) => {
     event.preventDefault();
@@ -12,12 +12,16 @@ export const Input = ({ label, type, ...rest }) => {
     <div>
       <label htmlFor={label}>{label}</label>
       <br />
-      <input {...rest} type={showPassword ? "text" : type} className="input" />
+      <input 
+        {...rest} 
+        type={showPassword ? "text" : type} 
+        className="input" 
+        ref={ref}/>
       {type == "password" ? (
         <figure onClick={onShowPassword}>
-          {showPassword ? <RiEyeOffFill /> : <RiEyeFill />}
+          {showPassword ?<RiEyeFill /> :<RiEyeOffFill />  }
         </figure>
       ) : null}
     </div>
   );
-};
+}); 

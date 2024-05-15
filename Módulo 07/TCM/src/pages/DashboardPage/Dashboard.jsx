@@ -3,6 +3,21 @@ import {useNavigate} from "react-router-dom"
 export const Dashboard = () => {
 
   const navigate = useNavigate();
+
+
+
+
+
+
+  // crair confirmações de usuario e pegar os valores que sarão passados dentro do return do usuario 
+
+
+
+
+
+
+
+  
   return (
     <>
       <header className={style.header}>

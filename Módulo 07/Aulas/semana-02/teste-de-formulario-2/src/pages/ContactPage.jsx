@@ -5,6 +5,7 @@ import { Input } from "../components/Header/Input";
 import { zodResolver } from "@hookform/resolvers/zod";
 import { useForm } from "react-hook-form";
 import { FormSchema } from "../scripts/formSchema";
+import { forwardRef } from "react";
 
 
 
@@ -33,8 +34,8 @@ export const ContactPage = ( ) => {
           id="name"
           placeholder="name"
           {...register("name")}
-          {...(errors.name ? <p>{errors.name.message}</p> : null)}
-        />
+          />
+          {errors.name ? <p>{errors.name.message}</p> : null}
         <Input
           label="email"
           type="email"
@@ -42,8 +43,8 @@ export const ContactPage = ( ) => {
           id="email"
           placeholder="email"
           {...register("email")}
-          {...(errors.email ? <p>{errors.email.message}</p> : null)}
-        />
+          />
+          {errors.email ? <p>{errors.email.message}</p> : null}
 
         <Input
           label="password"
@@ -52,10 +53,10 @@ export const ContactPage = ( ) => {
           id="password"
           placeholder="password"
           {...register("password")}
-          {...(errors.password ? <p>{errors.password.message}</p> : null)}
-        />
+          />
+          {errors.password ? <p>{errors.password.message}</p> : null}
 
-        <button>Submit</button>
+        <button type="submit">Submit</button>
       </form>
     </>
   );

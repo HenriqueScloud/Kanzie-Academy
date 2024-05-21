@@ -2,22 +2,49 @@ import { Input } from "../../components/Inputs/index";
 import { useNavigate } from "react-router-dom";
 import style from "./index.module.scss";
 import { useForm } from "react-hook-form";
-import { forwardRef } from "react";
-// import { forwardRef } from "react";
+import { zodResolver } from "@hookform/resolvers/zod";
+import { FormRegisterSchema } from "../../scripts/Zod/FormRegisterSchema";
+import { API } from "../../services/api";
+// import { useContext } from "react";
+// import { TodoContext } from "../../Providers/TodoContext";
 
-// eslint-disable-next-line react/display-name
-export const Register = forwardRef((props, ref) => {
+
+export const Register =() => {
   const Navigate = useNavigate();
+  // const { user,setUser }= useContext(TodoContext)
 
-  const { register, handleSubmit } = useForm();
+  const userRegister = async (formData) =>{
+    console.log(formData);
+    
+    await API.post('users', formData)
+    // setUser(...formData)
+    // console.log(user)
 
-  // fazer o registro do usuario dentro da api e encaminhalo para dentro do dashboard
+    // try {
+    //   await API.post("/users", formData);
+    //   setUser(formData)
+    //   console.log(user);
+    //   console.log('cadastro conluido !');
+    //   Navigate('/')
+      
+    // } catch (error) {
+    //   console.log(error.response.data.message);
+    // }
+  }
 
-  const enviar = (data) => {
-    console.log(data);
-    // Navigate("/dashboard");
+  const {
+    register,
+    handleSubmit,
+    formState: { errors },
+  } = useForm({
+    resolver: zodResolver(FormRegisterSchema),
+  });
+  
+  const enviar = (formData) => {
+    userRegister(formData);
+    Navigate('/')
   };
-
+  
   return (
     <>
       <header className={style.header}>
@@ -31,16 +58,17 @@ export const Register = forwardRef((props, ref) => {
         <p>Rápido e grátis, vamos nessa !</p>
         <form className={style.form} onSubmit={handleSubmit(enviar)}>
           <Input
-            ref={ref}
             label="Nome"
             placeholder="Digite aqui seu nome"
             type="text"
             id="name"
             name="name"
-            {...register('name')}
+            {...register("name")}
           />
+          {errors.name ? (
+            <p className="errorMessage">{errors.name.message}</p>
+          ) : null}
           <Input
-            ref={ref}
             label="Email"
             placeholder="Digite aqui seu email"
             type="text"
@@ -48,26 +76,32 @@ export const Register = forwardRef((props, ref) => {
             name="email"
             {...register("email")}
           />
+          {errors.email ? (
+            <p className="errorMessage">{errors.email.message}</p>
+          ) : null}
           <Input
-            ref={ref}
             label="Senha"
             placeholder="Digite aqui sua Senha"
             type="password"
-            id="Senha"
-            name="senha"
-            {...register("Senha")}
+            id="password"
+            name="password"
+            {...register("password")}
           />
+          {errors.password ? (
+            <p className="errorMessage">{errors.password.message}</p>
+          ) : null}
           <Input
-            ref={ref}
             label="Confimar senha"
             placeholder="Digite novamente sua senha "
             type="password"
-            id="confirmSenha"
-            name="confirmSenha"
-            {...register("confirmSenha")}
+            id="confirmPassword"
+            name="confirmPassword"
+            {...register("confirmPassword")}
           />
+          {errors.confirmPassword ? (
+            <p className="errorMessage">{errors.confirmPassword.message}</p>
+          ) : null}
           <Input
-            ref={ref}
             label="Bio"
             placeholder="Fale sobre você "
             type="text"
@@ -75,22 +109,26 @@ export const Register = forwardRef((props, ref) => {
             name="bio"
             {...register("bio")}
           />
+          {errors.bio ? (
+            <p className="errorMessage">{errors.bio.message}</p>
+          ) : null}
           <Input
-            ref={ref}
             label="contato"
             placeholder="Opção de contato "
             type="text"
-            id="contato"
-            name="contato"
-            {...register("contato")}
+            id="contact"
+            name="contact"
+            {...register("contact")}
           />
+          {errors.contact ? (
+            <p className="errorMessage">{errors.contact.message}</p>
+          ) : null}
           <label htmlFor="modulo">Selecionar Módulo</label>
           <br />
           <select
-            ref={ref}
-            name="modulo"
+            name="course_module"
             className={style.select}
-            {...register("modulo")}
+            {...register("course_module")}
           >
             <option value="Módulo 1">Módulo 1</option>
             <option value="Módulo 2">Módulo 2</option>
@@ -100,11 +138,14 @@ export const Register = forwardRef((props, ref) => {
             <option value="Módulo 6">Módulo 6</option>
             <option value="Módulo 7">Módulo 7</option>
           </select>
-          <button type='submit' className=" btn_primaryNegative" >
+          {errors.course_module ? (
+            <p className="errorMessage">{errors.course_module.message}</p>
+          ) : null}
+          <button type="submit" className=" btn_primaryNegative">
             Cadastre-se
           </button>
         </form>
       </main>
     </>
   );
-});
+};

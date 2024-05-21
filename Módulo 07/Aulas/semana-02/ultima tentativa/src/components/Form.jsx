@@ -21,9 +21,15 @@ export const Form = () =>{
 
   return (
     <form onSubmit={handleSubmit(submit)}>
-      <input type="text" placeholder="seu nome" {...register("name")} />
+      <input 
+        type="text" 
+        placeholder="seu nome" 
+        {...register("name")} />
       {errors.name ? <p> {errors.name.message} </p> : null}
-      <input type="email" placeholder="seu email" {...register("email")} />
+      <input 
+        type="email" 
+        placeholder="seu email" 
+        {...register("email")} />
       {errors.email ? <p> {errors.email.message} </p> : null}
 
       <select {...register("select")}>

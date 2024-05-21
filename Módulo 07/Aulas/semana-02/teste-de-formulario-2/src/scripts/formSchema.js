@@ -10,4 +10,6 @@ export const FormSchema = z.object({
     .regex(/(?=.*?[#?!@$%^&*-])/)
     .regex(/(?=.*?[0-9])/)
     .min(8,'A senha tem que conter no mínimo 8 caracteres !'),
+
+    
 });

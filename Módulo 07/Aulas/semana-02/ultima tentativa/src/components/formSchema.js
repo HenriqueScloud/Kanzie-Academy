@@ -1,4 +1,4 @@
-import { z } from "zod"
+import { z } from "zod";
 
 export const formSchema = z.object({
   name: z
@@ -10,6 +10,8 @@ export const formSchema = z.object({
     .nonempty(" o E-mail é obrigatorio !")
     .email("Forneça um E-mail válido !"),
   select: z.string().nonempty(" o modulo é obrigatorio !"),
-  massege:z.string().nonempty("A mensagem e obrigatoria !").min(8,"E necessário 8 digitos !")
-  
+  massege: z
+    .string()
+    .nonempty("A mensagem e obrigatoria !")
+    .min(8, "E necessário 8 digitos !"),
 });

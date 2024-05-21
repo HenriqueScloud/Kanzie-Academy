@@ -1,23 +1,10 @@
+import { useContext } from "react";
 import style from "./index.module.scss";
-import {useNavigate} from "react-router-dom"
+import { useNavigate } from "react-router-dom";
+import { TodoContext } from "../../Providers/TodoContext";
 export const Dashboard = () => {
-
   const navigate = useNavigate();
-
-
-
-
-
-
-  // crair confirmações de usuario e pegar os valores que sarão passados dentro do return do usuario 
-
-
-
-
-
-
-
-
+  const { user, userLogout } = useContext(TodoContext);
   return (
     <>
       <header className={style.header}>
@@ -25,14 +12,21 @@ export const Dashboard = () => {
           <figure>
             <img src="../src/assets/Logo.png" alt="midia" />
           </figure>
-          <button onClick={()=>navigate('/')}>sair</button>
+          <button
+            onClick={() => {
+              userLogout();
+              navigate("/");
+            }}
+          >
+            sair
+          </button>
         </div>
       </header>
       <main className={style.main}>
         <section>
           <div className="container">
-            <h1>Olá, Henrique Silva Mendes ! </h1>
-            <p>primeiro modulo ( Introdução ao Front-End )</p>
+            <h1>Olá, {user?.name} ! </h1>
+            <p>{user?.course_module} - ( Introdução ao Front-End )</p>
           </div>
         </section>
         <section>

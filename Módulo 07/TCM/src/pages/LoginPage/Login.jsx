@@ -4,36 +4,11 @@ import style from "./index.module.scss";
 import { useForm } from "react-hook-form";
 import { zodResolver } from "@hookform/resolvers/zod";
 import { FormLoginSchema } from "../../scripts/Zod/FormLoginSchema";
-import { API } from "../../services/api";
-// import { API } from "../../services/api";
-// import { useContext } from "react";
-// import { TodoContext } from "../../Providers/TodoContext";
-// eslint-disable-next-line react/display-name
+import { TodoContext } from "../../Providers/TodoContext";
+import { useContext } from "react";
 export const Login = () => {
   const Navigate = useNavigate();
-  // const { setUser }=useContext(TodoContext)
-
-  // criando rotas de login para o dashboard
-
-  const userLogin = async (formData) => {
-    console.log(formData);
-    
-    const { data } = API.post("/sessions", formData);
-    console.log(data.user);
-    console.log("login");
-    Navigate("/dashboard");
-
-    // try {
-    //   const response = await API.post("/login", formData);
-    //   const { token, user } = response.data;
-    //   localStorage.setItem("token", token);
-    //   localStorage.setItem("user", JSON.stringify(user));
-    //   setUser(user)
-    // } catch (error) {
-    //   console.log(error.response.data.message);
-    // }
-  };
-
+  const { userLogin } = useContext(TodoContext);
   const {
     register,
     handleSubmit,
@@ -41,13 +16,10 @@ export const Login = () => {
   } = useForm({
     resolver: zodResolver(FormLoginSchema),
   });
-
-  const submit = (data) => {
-    userLogin(data);
-    // console.log(data.user);
-    Navigate("/dashboard"); 
+  const submit = async (data) => {
+    userLogin(data, Navigate);
+    Navigate("/dashboard");
   };
-
   return (
     <>
       <header className={style.header}>
@@ -89,7 +61,7 @@ export const Login = () => {
           <button
             type="button"
             className="btn_desabilitado"
-            onClick={()=> Navigate('/register')}
+            onClick={() => Navigate("/register")}
           >
             Cadastre-se
           </button>

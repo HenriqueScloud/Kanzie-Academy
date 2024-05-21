@@ -1,5 +1,4 @@
 import { z } from "zod";
-
 export const FormRegisterSchema = z
   .object({
     name: z
@@ -45,6 +44,3 @@ export const FormRegisterSchema = z
     message: "As senhas não são compativeis !",
     path: ["confirmPassword"],
   });
-
-
-

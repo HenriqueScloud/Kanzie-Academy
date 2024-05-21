@@ -4,34 +4,11 @@ import style from "./index.module.scss";
 import { useForm } from "react-hook-form";
 import { zodResolver } from "@hookform/resolvers/zod";
 import { FormRegisterSchema } from "../../scripts/Zod/FormRegisterSchema";
-import { API } from "../../services/api";
-// import { useContext } from "react";
-// import { TodoContext } from "../../Providers/TodoContext";
-
-
-export const Register =() => {
-  const Navigate = useNavigate();
-  // const { user,setUser }= useContext(TodoContext)
-
-  const userRegister = async (formData) =>{
-    console.log(formData);
-    
-    await API.post('users', formData)
-    // setUser(...formData)
-    // console.log(user)
-
-    // try {
-    //   await API.post("/users", formData);
-    //   setUser(formData)
-    //   console.log(user);
-    //   console.log('cadastro conluido !');
-    //   Navigate('/')
-      
-    // } catch (error) {
-    //   console.log(error.response.data.message);
-    // }
-  }
-
+import { useContext } from "react";
+import { TodoContext } from "../../Providers/TodoContext";
+export const Register = () => {
+  const navigate = useNavigate();
+  const { userRegister } = useContext(TodoContext);
   const {
     register,
     handleSubmit,
@@ -39,19 +16,17 @@ export const Register =() => {
   } = useForm({
     resolver: zodResolver(FormRegisterSchema),
   });
-  
-  const enviar = (formData) => {
-    userRegister(formData);
-    Navigate('/')
+  const enviar = async (data) => {
+    userRegister(data, navigate);
+    navigate("/");
   };
-  
   return (
     <>
       <header className={style.header}>
         <figure>
           <img src="../src/assets/Logo.png" alt="midia" />
         </figure>
-        <button onClick={() => Navigate("/")}>Voltar</button>
+        <button onClick={() => navigate("/")}>Voltar</button>
       </header>
       <main className={style.main}>
         <h1>Crie sua conta</h1>

@@ -1,9 +1,8 @@
 import { useContext } from "react";
 import style from "./index.module.scss";
-import { useNavigate } from "react-router-dom";
+import { Link } from "react-router-dom";
 import { TodoContext } from "../../Providers/TodoContext";
 export const Dashboard = () => {
-  const navigate = useNavigate();
   const { user, userLogout } = useContext(TodoContext);
   return (
     <>
@@ -12,14 +11,14 @@ export const Dashboard = () => {
           <figure>
             <img src="../src/assets/Logo.svg" alt="midia" />
           </figure>
-          <button
+          <Link
+            to="/"
             onClick={() => {
               userLogout();
-              navigate("/");
             }}
           >
             sair
-          </button>
+          </Link>
         </div>
       </header>
       <main className={style.main}>

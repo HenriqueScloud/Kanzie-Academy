@@ -1,11 +1,12 @@
 import { Input } from "../../components/Inputs/index";
-import { useNavigate } from "react-router-dom";
+import { Link, useNavigate } from "react-router-dom";
 import style from "./index.module.scss";
 import { useForm } from "react-hook-form";
 import { zodResolver } from "@hookform/resolvers/zod";
 import { FormRegisterSchema } from "../../scripts/Zod/FormRegisterSchema";
 import { useContext } from "react";
 import { TodoContext } from "../../Providers/TodoContext";
+import img from "../../assets/Logo.svg";
 export const Register = () => {
   const navigate = useNavigate();
   const { userRegister } = useContext(TodoContext);
@@ -24,9 +25,9 @@ export const Register = () => {
     <>
       <header className={style.header}>
         <figure>
-          <img src="../src/assets/Logo.svg" alt="midia" />
+          <img src={img} alt="midia" />
         </figure>
-        <button onClick={() => navigate("/")}>Voltar</button>
+        <Link to="/">voltar</Link>
       </header>
       <main className={style.main}>
         <h1>Crie sua conta</h1>
@@ -39,10 +40,9 @@ export const Register = () => {
             id="name"
             name="name"
             {...register("name")}
+            required
           />
-          {errors.name ? (
-            <p className="errorMessage">{errors}</p>
-          ) : null}
+          {errors.name ? <p className="errorMessage">{errors}</p> : null}
           <Input
             label="Email"
             placeholder="Digite aqui seu email"

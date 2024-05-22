@@ -17,7 +17,9 @@
   display: flex;
   justify-content: space-between;
   align-items: center;
-  button {
+  a{
+    display: flex;
+    align-items: center;
     height: 40.11px;
     font: var(--headlineBold);
     color: var(--gray-0);

@@ -6,6 +6,7 @@ import { zodResolver } from "@hookform/resolvers/zod";
 import { FormLoginSchema } from "../../scripts/Zod/FormLoginSchema";
 import { TodoContext } from "../../Providers/TodoContext";
 import { useContext } from "react";
+import img from "../../assets/Logo.svg";
 export const Login = () => {
   const Navigate = useNavigate();
   const { userLogin } = useContext(TodoContext);
@@ -24,7 +25,7 @@ export const Login = () => {
     <>
       <header className={style.header}>
         <figure>
-          <img src="../src/assets/Logo.svg" alt="midia" />
+          <img src={img} alt="midia" />
         </figure>
       </header>
       <form className={style.form} onSubmit={handleSubmit(submit)}>

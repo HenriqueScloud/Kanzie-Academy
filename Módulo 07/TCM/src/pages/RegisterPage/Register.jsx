@@ -24,7 +24,7 @@ export const Register = () => {
     <>
       <header className={style.header}>
         <figure>
-          <img src="../src/assets/Logo.png" alt="midia" />
+          <img src="../src/assets/Logo.svg" alt="midia" />
         </figure>
         <button onClick={() => navigate("/")}>Voltar</button>
       </header>
@@ -41,7 +41,7 @@ export const Register = () => {
             {...register("name")}
           />
           {errors.name ? (
-            <p className="errorMessage">{errors.name.message}</p>
+            <p className="errorMessage">{errors}</p>
           ) : null}
           <Input
             label="Email"

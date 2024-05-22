@@ -34,7 +34,7 @@ export const TodoProvider = ({ children }) => {
       await API.post("/users", formData);
       navigate("/");
     } catch (error) {
-      console.log(error.response.data.message);
+      console.log(error);
     }
   };
   const userLogin = async (formData, Navigate) => {
@@ -45,7 +45,7 @@ export const TodoProvider = ({ children }) => {
       setUser(data.user);
       Navigate("/dashboard");
     } catch (error) {
-      console.log(error.response.data.message);
+      console.log(error);
     }
   };
   const userLogout = (navigate) => {

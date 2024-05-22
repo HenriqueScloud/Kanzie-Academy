@@ -10,6 +10,8 @@
   background-color: var(--gray-3);
   border-radius: 4px;
   padding: 42px 22px;
+  width: 370px;
+
   h1 {
     text-align: center;
     padding-block: 1rem;
@@ -25,4 +27,10 @@
   display: flex;
   flex-direction: column;
   gap: 0.625rem;
+}
+
+@media (max-width: 450px) {
+  .form {
+    width: 296px;
+  }
 }

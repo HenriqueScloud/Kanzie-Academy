@@ -10,7 +10,7 @@ export const Dashboard = () => {
       <header className={style.header}>
         <div className="container">
           <figure>
-            <img src="../src/assets/Logo.png" alt="midia" />
+            <img src="../src/assets/Logo.svg" alt="midia" />
           </figure>
           <button
             onClick={() => {

@@ -1,5 +1,5 @@
 .input {
-  width: 369px;
+  width: 90%;
   height: 48px;
   border-radius: 4px;
   padding: 0 16.24px;
@@ -15,7 +15,7 @@ form div {
   position: relative;
   figure {
     position: absolute;
-    left: 22.5rem;
+    left: 21rem;
     top: 2.9rem;
     background-color: transparent;
     border: none;
@@ -27,5 +27,14 @@ form div {
     justify-content: center;
     align-items: center;
     border-radius: 50%;
+  }
+}
+
+@media (max-width: 450px) {
+  form> div> figure{
+    left: 15rem;
+  }
+  .input{
+    width: 85%;
   }
 }

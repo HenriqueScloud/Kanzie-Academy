@@ -24,7 +24,7 @@ export const Login = () => {
     <>
       <header className={style.header}>
         <figure>
-          <img src="../src/assets/Logo.png" alt="midia" />
+          <img src="../src/assets/Logo.svg" alt="midia" />
         </figure>
       </header>
       <form className={style.form} onSubmit={handleSubmit(submit)}>

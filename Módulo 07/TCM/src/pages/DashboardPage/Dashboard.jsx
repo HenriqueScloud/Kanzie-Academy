@@ -2,6 +2,8 @@ import { useContext } from "react";
 import style from "./index.module.scss";
 import { Link } from "react-router-dom";
 import { TodoContext } from "../../Providers/TodoContext";
+import img from "../../assets/Logo.svg";
+
 export const Dashboard = () => {
   const { user, userLogout } = useContext(TodoContext);
   return (
@@ -9,7 +11,7 @@ export const Dashboard = () => {
       <header className={style.header}>
         <div className="container">
           <figure>
-            <img src="../src/assets/Logo.svg" alt="midia" />
+            <img src={img} alt="midia" />
           </figure>
           <Link
             to="/"

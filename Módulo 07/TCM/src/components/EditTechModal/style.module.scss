@@ -12,7 +12,8 @@
 .EditTechModal {
   border-radius: 4px;
   background-color: var(--gray-2);
-  width: 400px;
+  width: 80%;
+  max-width: 569px;
 
   header {
     height: 50px;

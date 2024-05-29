@@ -1,7 +1,7 @@
 import { useContext } from "react";
-import { TodoContext } from "../../Providers/TodoContext";
+import { UserContext } from "../../Providers/UserContext";
 import { Navigate, Outlet } from "react-router-dom";
 export const ProtectRoute = () => {
-  const { user } = useContext(TodoContext);
+  const { user } = useContext(UserContext);
   return user ? <Outlet /> : <Navigate to="/" />;
 };

@@ -5,11 +5,11 @@ import { useForm } from "react-hook-form";
 import { zodResolver } from "@hookform/resolvers/zod";
 import { FormRegisterSchema } from "../../scripts/Zod/FormRegisterSchema";
 import { useContext } from "react";
-import { TodoContext } from "../../Providers/TodoContext";
+import { UserContext } from "../../Providers/UserContext";
 import img from "../../assets/Logo.svg";
 export const Register = () => {
   const navigate = useNavigate();
-  const { userRegister } = useContext(TodoContext);
+  const { userRegister } = useContext(UserContext);
   const {
     register,
     handleSubmit,

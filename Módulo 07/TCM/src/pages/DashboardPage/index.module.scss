@@ -31,7 +31,7 @@
       }
     }
   }
-  section:first-child {
+  .section:first-child {
     border-bottom: 1px solid var(--gray-3);
     div {
       font: var(--font-family);
@@ -49,7 +49,7 @@
   }
 }
 @media  (max-width: 790px){ 
-  section>div {
+  .section>div {
       font: var(--font-family);
       display: flex;
       flex-direction: column;

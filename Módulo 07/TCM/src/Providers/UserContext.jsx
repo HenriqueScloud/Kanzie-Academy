@@ -1,9 +1,9 @@
 import { createContext, useEffect, useState } from "react";
 import { API } from "../services/api";
 import { useNavigate } from "react-router-dom";
-export const TodoContext = createContext({});
+export const UserContext = createContext({});
 // eslint-disable-next-line react/prop-types
-export const TodoProvider = ({ children }) => {
+export const UserProvider = ({ children }) => {
   const [user, setUser] = useState(null);
 
   const Navigate = useNavigate();
@@ -59,10 +59,10 @@ export const TodoProvider = ({ children }) => {
     }
   };
   return (
-    <TodoContext.Provider
+    <UserContext.Provider
       value={{ user, setUser, userRegister, userLogin, userLogout }}
     >
       {children}
-    </TodoContext.Provider>
+    </UserContext.Provider>
   );
 };

@@ -1,11 +1,16 @@
 import { useContext } from "react";
 import style from "./index.module.scss";
 import { Link } from "react-router-dom";
-import { TodoContext } from "../../Providers/TodoContext";
+import { UserContext } from "../../Providers/UserContext";
 import img from "../../assets/Logo.svg";
+import { TechList } from "../../components/TechList";
+import { CreateTechModal } from "../../components/CreateTechModal";
+import { EditTechModal } from "../../components/EditTechModal";
+import { TechContext } from "../../Providers/TechContext";
 
 export const Dashboard = () => {
-  const { user, userLogout } = useContext(TodoContext);
+  const { user, userLogout } = useContext(UserContext);
+  const { onCreateModal, editCardTech } = useContext(TechContext);
   return (
     <>
       <header className={style.header}>
@@ -24,19 +29,19 @@ export const Dashboard = () => {
         </div>
       </header>
       <main className={style.main}>
-        <section>
+        <section className={style.section}>
           <div className="container">
             <h1>Olá, {user?.name} ! </h1>
             <p>{user?.course_module} - ( Introdução ao Front-End )</p>
           </div>
         </section>
+
         <section>
           <div className="container">
-            <h1>Que pena! Estamos em desenvolvimento :(</h1>
-            <p>
-              Nossa aplicação está em desenvolvimento, em breve teremos
-              novidades
-            </p>
+            {onCreateModal ? <CreateTechModal /> :null}
+            
+            {editCardTech != null ? <EditTechModal/> :null }
+            <TechList />
           </div>
         </section>
       </main>

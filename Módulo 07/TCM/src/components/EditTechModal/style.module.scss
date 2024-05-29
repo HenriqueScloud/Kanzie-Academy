@@ -1,0 +1,48 @@
+.container {
+  position: absolute;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  top: 0;
+  left: 0;
+  width: 99vw;
+  height: 99vh;
+  background-color: rgba(0, 0, 0, 0.504);
+}
+.EditTechModal {
+  border-radius: 4px;
+  background-color: var(--gray-2);
+  width: 400px;
+
+  header {
+    height: 50px;
+    padding-inline: 1rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    button {
+      background-color: var(--gray-2);
+      color: var(--gray-1);
+      border: none;
+      font-family: var(--title-1);
+    }
+    h1 {
+      font: var(--title-1);
+      // border: 1px solid red;
+    }
+  }
+
+  form {
+    color: var(--gray-1);
+    padding: 1rem;
+    background-color: var(--gray-3);
+    select {
+      width: 99%;
+    }
+
+    button{
+      border: 1px solid red;
+      font: var(--title-2);
+    }
+  }
+}

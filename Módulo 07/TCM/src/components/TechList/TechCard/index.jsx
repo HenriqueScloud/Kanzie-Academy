@@ -1,6 +1,8 @@
 import { useContext } from "react";
 import { TechContext } from "../../../Providers/TechContext";
 import style from "./style.module.scss";
+import { FaPaintBrush, FaTrashAlt } from 'react-icons/fa'; // Ícones do Font Awesome
+
 
 export const TechCard = ({ card }) => {
   const { removeTech, setEditCardTech } = useContext(TechContext);
@@ -12,8 +14,8 @@ export const TechCard = ({ card }) => {
         <p>{card.status}</p>
       </div>
       <div className={style.card_buttons}>
-        <button onClick={() => setEditCardTech(card)}>E</button>
-        <button onClick={() => removeTech(card.id)}>X</button>
+        <button onClick={() => setEditCardTech(card)}><FaPaintBrush/></button>
+        <button onClick={() => removeTech(card.id)}><FaTrashAlt/></button>
       </div>
     </li>
   );

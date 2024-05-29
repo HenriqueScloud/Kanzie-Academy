@@ -1,16 +1,17 @@
 .card {
   display: flex;
   justify-content: space-between;
-  gap:2rem;
+  gap: 2rem;
   margin-block: 1rem;
   height: 49px;
   border-radius: 4px;
   background-color: var(--gray-4);
-  h1,p{
+  h1,
+  p {
     width: 100%;
     text-align: left;
   }
-  p{
+  p {
     text-align: right;
   }
 }
@@ -21,7 +22,7 @@
   align-items: center;
   width: 70%;
   padding: 0px !important;
-  margin-inline:1rem;
+  margin-inline: 1rem;
   h1 {
     padding-block: 5px !important;
     font: var(--headlineBold);
@@ -33,30 +34,29 @@
   max-width: 80px;
   gap: 10px;
   margin-inline: 1rem;
+  button {
+    background-color: transparent;
+    border: none;
+    color: var(--gray-1);
+  }
 }
-
-
 @media (max-width: 560px) {
   .card {
     display: flex;
     align-items: center;
     height: 75px;
   }
-  
-
   .card_Info {
     flex-direction: column;
     justify-content: space-around;
     gap: 15px;
-    // text-align: right;
-
     h1 {
       padding: 5px 0 !important;
       height: 1rem;
       font-size: 0.5rem;
     }
-    p{
-    text-align: left;
-  }
+    p {
+      text-align: left;
+    }
   }
 }

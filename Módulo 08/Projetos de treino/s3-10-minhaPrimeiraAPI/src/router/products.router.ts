@@ -1,14 +1,15 @@
 import { Router, Request, Response } from "express";
+import { ProductControllers } from "../controllers/products.controllers";
 
 export const productsRouter = Router();
+const productControllers = new ProductControllers();
 
-productsRouter.get("/", (req: Request, res: Response) => {
-  res.json("Leitura da pagina de produtos conlcuida !");
-});
+productsRouter.get("/", productControllers.getProduct);
+productsRouter.post("/", productControllers.createProcuts);
+productsRouter.delete("/:id", productControllers.deleteProduct);
 
-productsRouter.post("/", (req: Request, res: Response) => {
-  res.json({ message: "criações da página de produtos concluída com sucesso !" });
-});
+
+
 productsRouter.put("/", (req: Request, res: Response) => {
   res.json({
     message: "Atualização total da pagina de produtos concluída com sucesso!",
@@ -18,8 +19,5 @@ productsRouter.patch("/", (req: Request, res: Response) => {
   res.json({
     message: "Atualização parcial da pagina de produtos concluída com sucesso !",
   });
-});
-productsRouter.delete("/", (req: Request, res: Response) => {
-  res.json({ message: "Exlusão da pagina de produtos concluída com sucesso !" });
 });
 

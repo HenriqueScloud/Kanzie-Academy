@@ -1,12 +1,6 @@
 import { IUser } from "../interfaces/user.interface";
 
-export const UsersDataBase: IUser[] = [
-  {
-    id: 1,
-    name: "John !",
-    email: "john@gmail.com",
-    },
-]
+export const UsersDataBase: IUser[] = []
 
 let id = 0 ;
 

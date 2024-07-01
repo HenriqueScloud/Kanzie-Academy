@@ -1,0 +1,37 @@
+.btn_primary {
+  width: 100%;
+  background-color: var(--color-primary);
+  height: 48px;
+  border-radius: 4px;
+  cursor: pointer;
+  border: none;
+  color: var(--gray-0);
+  padding: 0 22.33px;
+  &:hover {
+    background-color: var(--color-primary-focus);
+  }
+}
+.btn_primaryNegative {
+  width: 100%;
+  background-color: var(--color-primary-negative);
+  height: 48px;
+  border-radius: 4px;
+  cursor: pointer;
+  border: none;
+  color: var(--gray-0);
+  padding: 0 22.33px;
+}
+.btn_desabilitado {
+  width: 100%;
+  background-color: var(--gray-1);
+  height: 48px;
+  border-radius: 4px;
+  cursor: pointer;
+  border: none;
+  color: var(--gray-0);
+  padding: 0 22.33px;
+
+  &:hover {
+    background-color: var(--gray-2);
+  }
+}

@@ -1,0 +1,40 @@
+.input {
+  width: 90%;
+  height: 48px;
+  border-radius: 4px;
+  padding: 0 16.24px;
+  background-color: var(--gray-2);
+  margin-block: 1rem;
+  color: var(--gray-0);
+  &:focus {
+    outline: 3px solid var(--gray-0);
+    color: var(--gray-0);
+  }
+}
+form div {
+  position: relative;
+  figure {
+    position: absolute;
+    left: 21rem;
+    top: 2.9rem;
+    background-color: transparent;
+    border: none;
+    color: var(--gray-0);
+    cursor: pointer;
+    width: 25px;
+    height: 25px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 50%;
+  }
+}
+
+@media (max-width: 450px) {
+  form> div> figure{
+    left: 15rem;
+  }
+  .input{
+    width: 85%;
+  }
+}

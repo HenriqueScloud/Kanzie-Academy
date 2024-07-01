@@ -1,0 +1,36 @@
+.header {
+  text-align: center;
+  margin-bottom: 3rem;
+  figure {
+    width: 40%;
+    margin: 0 auto;
+  }
+}
+.form {
+  background-color: var(--gray-3);
+  border-radius: 4px;
+  padding: 42px 22px;
+  width: 370px;
+
+  h1 {
+    text-align: center;
+    padding-block: 1rem;
+    font: var(--title-1);
+  }
+  button {
+    font: var(--title-2);
+  }
+}
+.aside {
+  padding-top: 12px;
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  gap: 0.625rem;
+}
+
+@media (max-width: 450px) {
+  .form {
+    width: 296px;
+  }
+}

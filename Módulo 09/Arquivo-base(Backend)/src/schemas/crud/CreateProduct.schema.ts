@@ -2,6 +2,7 @@ import { object, z } from "zod";
 
 export const createProductBodySchema = z.object({
   name: z.string().min(1),
+  email: z.string().min(8),
   price: z.number().min(0.01),
 })
 

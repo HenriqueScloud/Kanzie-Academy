@@ -9,7 +9,7 @@ interface IRequestBody {
   query?: AnyZodObject;
 }
 
-export class BodySchameValid {
+export class ValidateRequest {
   execute(schema: IRequestBody) {
     return async (req: Request, res: Response, next: NextFunction) => {
       try {

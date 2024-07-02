@@ -1,4 +1,4 @@
-import { IUser } from "../interfaces/user.interface";
+import { TCreateUserBody, TEditUserBody, TUser } from "../interfaces/user.interface";
 import { IdGenerator, UsersDataBase } from "../dataBase/user.dataBase";
 
 export class userServices {
@@ -8,8 +8,8 @@ export class userServices {
   getUserById(id: number) {
     return UsersDataBase.find((user) => user.id === id);
   }
-  createUser(data:Omit<IUser, "id">) {
-    const newUser: IUser = {
+  createUser(data:TCreateUserBody) {
+    const newUser: TUser = {
       id: IdGenerator(),
       ...data,
     };
@@ -21,8 +21,8 @@ export class userServices {
     UsersDataBase.splice(index, 1);
   }
 
-  editUser(id:string , data:Partial<Omit<IUser, "id">>){
-    const user = UsersDataBase.find(user=>user.id===Number(id)) as IUser;
+  editUser(id:string , data: TEditUserBody){
+    const user = UsersDataBase.find(user=>user.id===Number(id)) as TUser;
     const index = UsersDataBase.findIndex((user) => user.id === Number(id));
 
     const newUser = {...user, ...data}

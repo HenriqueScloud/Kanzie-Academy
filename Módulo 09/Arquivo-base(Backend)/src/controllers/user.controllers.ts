@@ -17,4 +17,9 @@ export class userControllers {
     const response = UserServices.deleteUser(req.params.id);
     return res.status(204).json(response);
   }
+  editUser(req: Request, res: Response) {
+    const UserServices = new userServices();
+    const response = UserServices.editUser(req.params.id, req.body);
+    return res.status(200).json(response);
+  }
 }

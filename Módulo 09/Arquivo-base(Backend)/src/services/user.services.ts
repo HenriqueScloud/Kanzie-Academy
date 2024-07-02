@@ -8,7 +8,7 @@ export class userServices {
   getUserById(id: number) {
     return UsersDataBase.find((user) => user.id === id);
   }
-  createUser(data: any) {
+  createUser(data:Omit<IUser, "id">) {
     const newUser: IUser = {
       id: IdGenerator(),
       ...data,
@@ -19,5 +19,14 @@ export class userServices {
   deleteUser(id: string) {
     const index = UsersDataBase.findIndex((user) => user.id === Number(id));
     UsersDataBase.splice(index, 1);
+  }
+
+  editUser(id:string , data:Partial<Omit<IUser, "id">>){
+    const user = UsersDataBase.find(user=>user.id===Number(id)) as IUser;
+    const index = UsersDataBase.findIndex((user) => user.id === Number(id));
+
+    const newUser = {...user, ...data}
+    UsersDataBase.splice(index, 1, newUser);
+    return newUser
   }
 }

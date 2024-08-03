@@ -1,0 +1,88 @@
+// This is your Prisma schema file,
+// learn more about it in the docs: https://pris.ly/d/prisma-schema
+
+// Looking for ways to speed up your queries, or scale easily with your serverless or edge functions?
+// Try Prisma Accelerate: https://pris.ly/cli/accelerate-init
+
+
+
+
+// model Aluno{
+//   id Int @id @default(autoincrement())
+//   name String 
+//   email String @unique 
+//   alunoInfo AlunoInfo? 
+//   questoes Questao[] 
+//   alunoCurso AlunoCurso[]
+// }
+// model AlunoInfo{
+//   id Int @id @default(autoincrement())
+//   phone String
+//   address String 
+//   alunoId Int @unique 
+//   aluno Aluno @relation(fields: [alunoId], references: [id]) 
+// }
+// model Questao{
+//   id Int @id @default(autoincrement())
+//   title String
+//   content String?
+//   alunoId Int 
+//   questao Aluno @relation(fields: [alunoId], references: [id]) 
+// }
+
+// model AlunoCurso{
+//   id Int @id @default(autoincrement())
+//   alunoId Int 
+//   alunos Aluno @relation(fields: [alunoId], references: [id])
+//   cursoId Int 
+//   cursos Curso @relation(fields: [cursoId], references: [id])
+// }
+
+// model Curso {
+//   id Int @id @default(autoincrement())
+//   name String
+//   description String?
+//   alunoCurso AlunoCurso[]
+// }
+
+// This is your Prisma schema file,
+// learn more about it in the docs: https://pris.ly/d/prisma-schema
+
+generator client {
+  provider = "prisma-client-js"
+}
+
+datasource db {
+  provider = "postgresql"
+  url      = env("DATABASE_URL")
+}
+
+model Productos{
+  id Int @id @default(autoincrement())
+  name String 
+  description String?
+  price Float
+  storageInfo StorageInfo?
+  storeId Int 
+  store Store @relation(fields: [storeId], references: [id])
+  categories Category[]
+}
+
+model Category{
+  id Int @id @default(autoincrement())
+  name String
+  products Productos[]
+}
+
+model Store{
+  id Int @id @default(autoincrement())
+  name String 
+  products Productos[]
+}
+
+model StorageInfo{
+  id Int @id @default(autoincrement())
+  stock Int
+  productId Int @unique
+  product Productos @relation(fields: [productId], references: [id])
+}

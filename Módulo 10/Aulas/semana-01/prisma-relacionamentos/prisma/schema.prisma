@@ -1,0 +1,164 @@
+// This is your Prisma schema file,
+// learn more about it in the docs: https://pris.ly/d/prisma-schema
+
+// Looking for ways to speed up your queries, or scale easily with your serverless or edge functions?
+// Try Prisma Accelerate: https://pris.ly/cli/accelerate-init
+
+generator client {
+  provider = "prisma-client-js"
+}
+
+datasource db {
+  provider = "postgresql"
+  url      = env("DATABASE_URL")
+}
+
+
+
+// ==================== RELACIONAMENTO DE 1:1
+
+// model Aluno{
+//   id Int @id @default(autoincrement())
+//   name String 
+//   email String @unique 
+//   alunoInfo AlunoInfo? // 1:1
+// }
+// model AlunoInfo{
+//   id Int @id @default(autoincrement())
+//   phone String
+//   address String 
+//   alunoId Int @unique // 1:1
+//   aluno Aluno @relation(fields: [alunoId], references: [id]) // 1:1
+// //nome  type  @relation(fields: [doc.esse-arq], references: [doc.arq-ref])
+// }
+
+
+// ================= RELACIONAMENTE DE 1:N
+
+// model Aluno{
+//   id Int @id @default(autoincrement())
+//   name String 
+//   email String @unique 
+//   questoes Questao[] //1:N
+// }
+// model Questao{
+//   id Int @id @default(autoincrement())
+//   title String
+//   content String?
+//   alunoId Int // 1:N
+//   questao Aluno @relation(fields: [alunoId], references: [id]) // 1:N
+// //nome  type  @relation(fields: [doc.esse-arq], references: [doc.arq-ref])
+// }
+
+
+
+// =========== EXERCICIO DE 1:1 / 1:N
+
+// model Aluno{
+//   id Int @id @default(autoincrement())
+//   name String 
+//   email String @unique 
+//   alunoInfo AlunoInfo? // 1:1
+//   questoes Questao[] //1:N
+// }
+// model AlunoInfo{
+//   id Int @id @default(autoincrement())
+//   phone String
+//   address String 
+//   alunoId Int @unique // 1:1
+//   aluno Aluno @relation(fields: [alunoId], references: [id]) // 1:1
+// //nome  type  @relation(fields: [doc.esse-arq], references: [doc.arq-ref])
+// }
+// model Questao{
+//   id Int @id @default(autoincrement())
+//   title String
+//   content String?
+//   alunoId Int // 1:N
+//   questao Aluno @relation(fields: [alunoId], references: [id]) // 1:N
+// //nome  type  @relation(fields: [doc.esse-arq], references: [doc.arq-ref])
+// }
+
+// =============== RELACIONAMENTOS N:N ( IMPLICITA E EXPLICITA )
+
+
+// //IMPLICITA
+// model produto {
+//   id Int @id @default(autoincrement())
+//   name String
+//   price Int
+//   categorias category[] // N:N
+// }
+// model category{
+//   id Int @id @default(autoincrement())
+//   name String
+//   produtos produto[] // N:N
+// }
+
+
+// EXPLICITA
+
+// model Post {
+//   id         Int                 @id @default(autoincrement())
+//   title      String
+//   categories CategoriesOnPosts[]
+// }
+
+// model Category {
+//   id    Int                 @id @default(autoincrement())
+//   name  String
+//   posts CategoriesOnPosts[]
+// }
+
+// model CategoriesOnPosts {
+//   post       Post     @relation(fields: [postId], references: [id])
+//   postId     Int // relation scalar field (used in the `@relation` attribute above)
+//   category   Category @relation(fields: [categoryId], references: [id])
+//   categoryId Int // relation scalar field (used in the `@relation` attribute above)
+//   assignedAt DateTime @default(now())
+//   assignedBy String
+
+//   @@id([postId, categoryId])
+// }
+
+
+
+// ========= relacionamento de n:n - exercicios 
+
+
+model Aluno{
+  id Int @id @default(autoincrement())
+  name String 
+  email String @unique 
+  alunoInfo AlunoInfo? 
+  questoes Questao[] 
+  alunoCurso AlunoCurso[]
+}
+model AlunoInfo{
+  id Int @id @default(autoincrement())
+  phone String
+  address String 
+  alunoId Int @unique 
+  aluno Aluno @relation(fields: [alunoId], references: [id]) 
+}
+model Questao{
+  id Int @id @default(autoincrement())
+  title String
+  content String?
+  alunoId Int 
+  questao Aluno @relation(fields: [alunoId], references: [id]) 
+}
+
+model AlunoCurso{
+  id Int @id @default(autoincrement())
+  alunoId Int 
+  alunos Aluno @relation(fields: [alunoId], references: [id])
+  cursoId Int 
+  cursos Curso @relation(fields: [cursoId], references: [id])
+}
+
+model Curso {
+  id Int @id @default(autoincrement())
+  name String
+  description String?
+  alunoCurso AlunoCurso[]
+}

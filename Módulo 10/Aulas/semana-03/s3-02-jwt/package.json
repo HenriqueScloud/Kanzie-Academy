@@ -4,7 +4,7 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "dev": " tsnd --clear --respawn src/index.ts"
+    "dev": "tsnd --clear --respawn src/server.ts"
   },
   "keywords": [],
   "author": "",

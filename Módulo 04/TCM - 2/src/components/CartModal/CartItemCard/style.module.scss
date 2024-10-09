@@ -1,0 +1,59 @@
+.CartItemCard {
+  padding: .8rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  div {
+    width: 80px;
+    height: 80px;
+    background-color: var(--gray-0);
+    border-radius: 5px;
+    // border: 1px solid red;
+    overflow: hidden;
+  }
+  aside{
+    
+    // border: 1px solid red;
+    padding: .25rem;
+    font-size: 1rem;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    gap: 15px;
+    margin-right:10px ;
+    
+    button{
+      // border: 1px solid red;
+      background-color: var(--gray-6);
+      color: var(--gray-1);
+      border-radius: 5px;
+      
+    }
+    
+  }
+  main {
+    // border: 1px solid red;
+    width-max: 15rem;
+    margin-top: 50px;
+    height: 80px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    margin: 0 1rem;
+    
+  }
+
+  button {
+    border: none;
+    background-color: transparent;
+    color: var(--gray-300);
+  }
+  img {
+    width: 100%;
+  }
+
+
+
+
+}

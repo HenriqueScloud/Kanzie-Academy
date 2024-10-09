@@ -1,0 +1,39 @@
+.filtro__genre-section {
+
+  margin: 0 .625rem;
+  max-width: 64rem;
+  margin: 0 auto;
+  padding: 0 .625rem;
+
+}
+
+
+
+.filtro__genre-title {
+  font-size: 1.5rem;
+  font-weight: bold;
+  padding: 1rem 0;
+}
+
+.filtros__genres {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1.5625rem;
+}
+
+.filtro__genre-btn:hover {
+  border: .0625rem solid var(--gray-1);
+}
+
+.filtro__genre-btn {
+  padding: .5rem;
+  border: .0625rem solid var(--gray-8);
+
+  border-radius: var(--border-radio);
+  background-color: var(--gray-6);
+}
+
+.filtro__genre-btn--ativo {
+  background-color: var(--gray-2);
+  color: var(--gray-8);
+}

@@ -2,33 +2,38 @@ import { Input } from "../../components/Inputs";
 import { useNavigate } from "react-router-dom";
 import style from "./index.module.scss";
 import { useForm } from "react-hook-form";
+// import { forwardRef } from "react";
 import { zodResolver } from "@hookform/resolvers/zod";
-import { FormLoginSchema } from "../../scripts/Zod/FormLoginSchema";
-import { UserContext } from "../../Providers/UserContext";
-import { useContext } from "react";
-import img from "../../assets/Logo.svg";
+import { FormSchema } from "../../scripts/Zod/FormSchema";
+// eslint-disable-next-line react/display-name
 export const Login = () => {
   const Navigate = useNavigate();
-  const { userLogin } = useContext(UserContext);
+
+  const navigate = useNavigate();
+
+  // criando rotas de login para o dashboard
+
   const {
     register,
     handleSubmit,
     formState: { errors },
   } = useForm({
-    resolver: zodResolver(FormLoginSchema),
+    resolver: zodResolver(FormSchema),
   });
-  const submit = async (data) => {
-    userLogin(data, Navigate);
-    Navigate("/dashboard");
+
+  const enviar = (data) => {
+    console.log(data);
+    navigate("/dashboard");
   };
+
   return (
     <>
       <header className={style.header}>
         <figure>
-          <img src={img} alt="midia" />
+          <img src="../src/assets/Logo.png" alt="midia" />
         </figure>
       </header>
-      <form className={style.form} onSubmit={handleSubmit(submit)}>
+      <form className={style.form} onSubmit={handleSubmit(enviar)}>
         <h1>Login</h1>
         <Input
           label="Email"
@@ -46,12 +51,12 @@ export const Login = () => {
           label="Senha"
           placeholder="Digite sua Senha"
           type="password"
-          id="password"
-          name="password"
-          {...register("password")}
+          id="Senha"
+          name="Senha"
+          {...register("senha")}
         />
-        {errors.password ? (
-          <p className="errorMessage">{errors.password.message}</p>
+        {errors.senha ? (
+          <p className="errorMessage">{errors.senha.message}</p>
         ) : null}
         <br />
         <button type="submit" className="btn_primary">

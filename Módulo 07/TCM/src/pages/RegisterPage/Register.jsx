@@ -1,49 +1,57 @@
 import { Input } from "../../components/Inputs/index";
-import { Link, useNavigate } from "react-router-dom";
+import { useNavigate } from "react-router-dom";
 import style from "./index.module.scss";
 import { useForm } from "react-hook-form";
+import { forwardRef } from "react";
 import { zodResolver } from "@hookform/resolvers/zod";
-import { FormRegisterSchema } from "../../scripts/Zod/FormRegisterSchema";
-import { useContext } from "react";
-import { UserContext } from "../../Providers/UserContext";
-import img from "../../assets/Logo.svg";
+import { FormSchema } from "../../scripts/Zod/FormSchema";
+
+// eslint-disable-next-line react/display-name
 export const Register = () => {
-  const navigate = useNavigate();
-  const { userRegister } = useContext(UserContext);
+  const Navigate = useNavigate();
+
   const {
     register,
     handleSubmit,
     formState: { errors },
   } = useForm({
-    resolver: zodResolver(FormRegisterSchema),
+    resolver: zodResolver(FormSchema),
   });
-  const enviar = async (data) => {
-    userRegister(data, navigate);
-    navigate("/");
+
+  // fazer o registro do usuario dentro da api e encaminhalo para dentro do dashboard
+
+  const enviar = (data) => {
+    console.log("ola");
+    console.log(data);
+    Navigate("/dashboard");
   };
+
   return (
     <>
       <header className={style.header}>
         <figure>
-          <img src={img} alt="midia" />
+          <img src="../src/assets/Logo.png" alt="midia" />
         </figure>
-        <Link to="/">voltar</Link>
+        <button onClick={() => Navigate("/")}>Voltar</button>
       </header>
       <main className={style.main}>
         <h1>Crie sua conta</h1>
         <p>Rápido e grátis, vamos nessa !</p>
         <form className={style.form} onSubmit={handleSubmit(enviar)}>
           <Input
+            ref={ref}
             label="Nome"
             placeholder="Digite aqui seu nome"
             type="text"
             id="name"
             name="name"
             {...register("name")}
-            required
           />
-          {errors.name ? <p className="errorMessage">{errors}</p> : null}
+          {errors.name ? (
+            <p className="errorMessage">{errors.name.message}</p>
+          ) : null}
           <Input
+            ref={ref}
             label="Email"
             placeholder="Digite aqui seu email"
             type="text"
@@ -55,26 +63,27 @@ export const Register = () => {
             <p className="errorMessage">{errors.email.message}</p>
           ) : null}
           <Input
+            ref={ref}
             label="Senha"
             placeholder="Digite aqui sua Senha"
             type="password"
-            id="password"
-            name="password"
-            {...register("password")}
+            id="Senha"
+            name="Senha"
+            {...register("Senha")}
           />
-          {errors.password ? (
-            <p className="errorMessage">{errors.password.message}</p>
+          {errors.Senha ? (
+            <p className="errorMessage">{errors.Senha.message}</p>
           ) : null}
           <Input
             label="Confimar senha"
             placeholder="Digite novamente sua senha "
             type="password"
-            id="confirmPassword"
-            name="confirmPassword"
-            {...register("confirmPassword")}
+            id="confirmSenha"
+            name="confirmSenha"
+            {...register("confirmSenha")}
           />
-          {errors.confirmPassword ? (
-            <p className="errorMessage">{errors.confirmPassword.message}</p>
+          {errors.confirmSenha ? (
+            <p className="errorMessage">{errors.confirmSenha.message}</p>
           ) : null}
           <Input
             label="Bio"
@@ -91,19 +100,19 @@ export const Register = () => {
             label="contato"
             placeholder="Opção de contato "
             type="text"
-            id="contact"
-            name="contact"
-            {...register("contact")}
+            id="contato"
+            name="contato"
+            {...register("contato")}
           />
-          {errors.contact ? (
-            <p className="errorMessage">{errors.contact.message}</p>
+          {errors.contato ? (
+            <p className="errorMessage">{errors.contato.message}</p>
           ) : null}
           <label htmlFor="modulo">Selecionar Módulo</label>
           <br />
           <select
-            name="course_module"
+            name="modulo"
             className={style.select}
-            {...register("course_module")}
+            {...register("modulo")}
           >
             <option value="Módulo 1">Módulo 1</option>
             <option value="Módulo 2">Módulo 2</option>
@@ -113,8 +122,8 @@ export const Register = () => {
             <option value="Módulo 6">Módulo 6</option>
             <option value="Módulo 7">Módulo 7</option>
           </select>
-          {errors.course_module ? (
-            <p className="errorMessage">{errors.course_module.message}</p>
+          {errors.modulo ? (
+            <p className="errorMessage">{errors.modulo.message}</p>
           ) : null}
           <button type="submit" className=" btn_primaryNegative">
             Cadastre-se

@@ -9,6 +9,7 @@ export class UserControllers {
     const response = userServices.getUsers()
     return res.status(200).json(response)
   }
+  // crinado uma functon para criações de nvos useres 
 
   createUser(req: Request, res: Response): Response {
     const userServices = new UserServices();
